@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='css/group.css' type='text/css'>
+  <link rel='stylesheet' href='css/check.css' type='text/css'>
+  <title>itos</title>
+</head>
+
+<body class='darkness'>
+  <header>
+    <h1 class='left-arrow'><a href='index.html'>모임통장</a></h1>
+    <p>여행 회비<br><span>500,000</span><em>원</em></p>
+    <nav>
+      <a class='active'>회비</a>
+      <a>입출금</a>
+      <a>친구</a>
+    </nav>
+  </header>
+  <main id='due' class='active'>
+    <nav class='gap'>
+      <a class='icon chat' href=''></a>
+      <p>권효진,안원균,남동현<br><span>채팅방 들어가기</span></p>
+      <i class='fas fa-chevron-right'></i>
+    </nav>
+    <div>
+      <span>회비를 걷어볼까요?</span>
+      데이트 통장용, 동호회 회비, 여행 경비 등등<br>
+      필요한 회비를 모아보세요.
+    </div>
+    <button>모임통장 만들기</button>
+  </main>
+  <main id='record' class='gap'>
+    <aside>
+      <article>
+        <a class='icon plus'></a>권효진
+        <p>
+          <var>+10,000</var>원<br>
+          <span>160,000</span>원
+        </p>
+      </article>
+      <article>
+        <a class='icon plus'></a>안원균
+        <p>
+          <var>+10,000</var>원<br>
+          <span>160,000</span>원
+        </p>
+      </article>
+      <article>
+        <a class='icon minus'></a>남동현
+        <p>
+          <var>-10,000</var>원<br>
+          <span>160,000</span>원
+        </p>
+      </article>
+    </aside>
+    <nav>
+      <a>입금</a>
+      <a>출금</a>
+    </nav>
+  </main>
+  <main id='friend'>
+    <aside>
+      <article>
+        <a class='name'>권</a>권효진
+      </article>
+      <hr>
+      <article>
+        <a class='name'>남</a>남동현
+      </article>
+      <hr>
+      <article>
+        <a class='name'>안</a>안원균
+      </article>
+      <hr>
+      <article>
+        <a class='name'>이</a>이나경
+      </article>
+    </aside>
+    <button>친구 추가하기</button>
+  </main>
+  <code id='darkness'></code>
+  <code id='form'>
+    <form>
+      <h1 class='left-arrow'><a href='group.html'>모임통장</a></h1>
+      모임통장의 이름을 알려주세요
+      <input type='text' name='name' placeholder='통장 이름'>
+      한명당 얼마를 걷을까요?
+      <input type='text' name='money' placeholder='0' numberOnly>
+      <span><i class='fas fa-check-circle'></i>&nbsp;전원에게 매달 말일 자동으로 걷습니다.</span><br><br>
+      함께하는 친구를 초대해주세요
+      <input type='text' name='invite' placeholder='친구를 선택하세요' readonly>
+      <input type='submit' value='확인' style='margin-top:30px;'>
+    </form>
+  </code>
+  <code id='choice'>
+    <nav>
+      <div><a class='name' href=''>이</a><var>이나경</var></div>
+    </nav>
+    <input class='search' type='text' placeholder='직접 검색해보세요'>
+    <aside>
+      <article>
+        <a class='name' href=''>권</a>
+        <p><var>권효진</var>  <br><span>010-1234-5678</span></p>
+        <i class='fas fa-check-circle'></i>
+      </article>
+      <article>
+        <a class='name' href=''>안</a>
+        <p><var>안원균</var>  <br><span>010-1234-5678</span></p>
+        <i class='fas fa-check-circle'></i>
+      </article>
+      <article>
+        <a class='name' href=''>남</a>
+        <p><var>남동현</var><br><span>010-1234-5678</span></p>
+        <i class='fas fa-check-circle'></i>
+      </article>
+      <article>
+        <a class='name' href=''>김</a>
+        <p><var>김세인</var><br><span>010-1234-5678</span></p>
+        <i class='fas fa-check-circle'></i>
+      </article>
+      <article>
+        <a class='name' href=''>정</a>
+        <p><var>정혜진</var><br><span>010-1234-5678</span></p>
+        <i class='fas fa-check-circle'></i>
+      </article>
+      <article>
+        <a class='name' href=''>백</a>
+        <p><var>백종준</var><br><span>010-1234-5678</span></p>
+        <i class='fas fa-check-circle'></i>
+      </article>
+      <article>
+        <a class='name' href=''>고</a>
+        <p><var>고준우</var><br><span>010-1234-5678</span></p>
+        <i class='fas fa-check-circle'></i>
+      </article>
+      <article>
+        <a class='name' href=''>이</a>
+        <p><var>이동주</var><br><span>010-1234-5678</span></p>
+        <i class='fas fa-check-circle'></i>
+      </article>
+      <article>
+        <a class='name' href=''>김</a>
+        <p><var>김희상</var><br><span>010-1234-5678</span></p>
+        <i class='fas fa-check-circle'></i>
+      </article>
+    </aside>
+    <button>확인</button>
+  </code>
+  <code id='success'>
+    <div class='success-checkmark'>
+      <div class='check-icon'>
+        <span class='icon-line line-tip'></span>
+        <span class='icon-line line-long'></span>
+        <div class='icon-circle'></div>
+        <div class='icon-fix'></div>
+      </div>
+    </div>
+    <p>
+      <em>모임 통장이 개설되었습니다!</em><br>
+      <span><i class='far fa-question-circle'></i> 송금 무료 횟수가 <a>총 4번</a> 남았어요.</span>
+    </p>
+    <button><a href='group.html'>홈으로</a></button>
+    <button class='second'>아이토스 프라임 신청하기</button>
+  </code>
+  <footer>
+    <ul>
+      서비스
+      <li>공지사항</li>
+      <li>자주묻는질문</li>
+      <li>공동인증서 관리</li>
+      <li>고객센터</li>
+    </ul>
+    <ul>
+      회사
+      <li>회사 소개</li>
+      <li>오시는 길</li>
+      <li>채용</li>
+      <li>공고</li>
+    </ul>
+    <ul>
+      문의
+      <li>사업 제휴</li>
+      <li>광고 문의</li>
+      <li>인증 사업 문의</li>
+      <li>마케팅 & PR</li>
+    </ul>
+    <ul>
+      고객센터
+      <li>전화: 1577-1588</li>
+      <li>이메일(고객전용): support@itoss.im</li>
+      <li>이메일(외부기관): support-af@itoss.im</li>
+      <li>민원 접수</li>
+    </ul>
+    <ul>
+      Copyright © Itos Corp. All rights reserved.
+      <li>서비스 이용약관</li>
+      <li>통합 금융정보 서비스 약관</li>
+      <li>개인정보 처리방침</li>
+      <li>위치기반서비스 이용약관</li>
+    </ul>
+  </footer>
+</body>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+<script>
+  let listArr = ['이나경'];
+  $('#due button').click(function () {
+    $('header , main').hide();
+    $('#form').show();
+  });
+  $("input[name='invite']").click(function () {
+    $('#darkness').show();
+    $('#choice').addClass('active');
+  });
+  $('#darkness').click(function () {
+    $('#darkness').hide();
+    $('#choice').removeClass('active');
+  });
+  $('form').submit(function (e) {
+    e.preventDefault();
+    if (this.name.value == '') {
+      alert('통장 이름을 정해주세요.');
+      return;
+    }
+    if (this.money.value == '') {
+      alert('걷을 금액을 입력해주세요.');
+      return;
+    }
+    if (this.invite.value == '') {
+      alert('그룹원을 선택해주세요.');
+      return;
+    }
+    $('.check-icon').hide();
+    setTimeout(function () {
+      $('.check-icon').show();
+    }, 300);
+    $('#choice , #form').hide();
+    $('#success').show();
+  });
+  $('input[numberOnly]').on('keyup', function () {
+    let text = String($(this).val()).replace(/(\d)/g, '');
+    if (text == '') { } else {
+      $(this).val($(this).val().replace(/[^0-9]/gi, ''));
+      alert('숫자만 입력 가능합니다.');
+    }
+  });
+  $('.search').keyup(function () {
+    let text = $(this).val();
+    let reg = new RegExp(`${text}`);
+    let target = $(this).siblings('aside').children();
+    target.each(function () {
+      $(this).text().match(reg) == null ?
+        $(this).hide() : $(this).show();
+    });
+  });
+  $('#choice article').click(function () {
+    let text = $(this).find('var').text();
+    let overlap = true;
+    listArr.forEach(elem => {
+      if (elem == text) {
+        overlap = false;
+      }
+    });
+    if (overlap == true) {
+      $(`<div><a class='name'>${text[0]}</a><var>${text}</var><button class='delete'><i class="fas fa-times"></i></button></div>`).appendTo('#choice nav');
+      listArr.push(text);
+      $('.delete').eq(listArr.length - 2).on('click', function () {
+        let value = $(this).parent('div').find('var').text();
+        $(this).parent('div').remove();
+        listArr.pop(value);
+      });
+    }
+  });
+
+  $('#choice > button').click(function () {
+    let inject = '';
+    $('nav > div > var').each(function () {
+      let text = $(this).text();
+      inject += text + ',';
+    });
+    inject = inject.replace(/,(?!.)/g, '');
+    $("input[name='invite']").val(inject);
+    $('#darkness').hide();
+    $('#choice').removeClass('active');
+  });
+
+
+  $('header nav a').click(function () {
+    let index = $(this).index();
+    $('header nav a').removeClass('active').eq(index).addClass('active');
+    $('main').hide().eq(index).show();
+  });
+</script>
+
+</html>

@@ -1,0 +1,32 @@
+@import 'setting.scss';
+#account{
+  div{display: flex; justify-content: space-between; align-items: center; padding: 20px; margin-bottom: 30px; border:1px solid #007AFF; border-radius:20px; font: 500 16px $Noto;
+    span{font: bold 18px $Lato; color: #007AFF;}
+  }
+  button{@include button(#fff,#007AFF,#fff); width: 100%; margin: 30px 0; padding: 15px;}
+}
+#bank{display: none;
+  section{width: calc(100% + 30px); padding: 50px 0; margin-left: -15px; position:relative; z-index: 100; color: #fff; background: #007AFF; text-align: center;
+    hgroup{
+      h3{font: 500 14px $Noto;
+        span{ font: 500 14px $Lato; }
+      }
+        h4{font: 500 20px $Noto;
+          span{font: 700 28px $Lato;} 
+      }
+    }
+    button{@include button(#007AFF,#fff); width: 50%; font: 500 14px $Noto; margin: 30px auto; padding: 15px;}
+  }
+  h2{
+    span{font: bold 16px $Lato; color: #007AFF;}
+  }
+}
+select{
+  width: auto; padding: 10px 30px 10px 10px; border-radius: 0; background: #fff; font: 500 20px $Noto;
+  appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('../img/img_consume_0.png') no-repeat;
+    background-position: calc(100% - 10px) center;
+    background-size: 13px;
+}

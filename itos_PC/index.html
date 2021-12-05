@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css'>
+    <link rel='stylesheet' href='css/main.css' type='text/css'>
+    <link href='https://unpkg.com/aos@2.3.1/dist/aos.css' rel='stylesheet'>
+    <script src='https://unpkg.com/aos@2.3.1/dist/aos.js'></script>
+    <title>itos</title>
+</head>
+
+<body>
+    <div class='remocon'><i class='fas fa-sort-up'></i></div>
+    <header>
+        <section>
+            <a href='index.html' class='logo'>
+            </a>
+            <nav>
+                <a href='sub1.html'>회사소개</a>
+                <a href='sub2.html'>고객센터</a>
+                <a href='sub3.html'>자주묻는질문</a>
+                <a href='sub4.html'>채용</a>
+            </nav>
+        </section>
+    </header>
+    <main id='banner'>
+        <img class='banner__background' src='img/main/img/banner/img_banner_1.png' alt='배경'>
+        <section>
+            <div class='banner__box'>
+                <p>차세대 금융 서비스<br><span>아이토스에서 누구나 쉽고 간편하게</span></p>
+                <ul class='banner__btn'>
+                    <li><img src='img/main/img/banner/googleplay.svg' alt='구글플레이'></li>
+                    <li><img src='img/main/img/banner/appstore.svg' alt='앱스토어'></li>
+                </ul>
+            </div>
+            <img class='banner__phone' src='img/main/img/banner/img_banner_0.png' alt='핸드폰'>
+            <img class='banner__paper' src='img/main/img/banner/img_banner_2.png' alt='종이비행기'>
+        </section>
+    </main>
+    <main id='service'>
+        <section>
+            <div>
+                <hgroup>
+                    <h2>모바일로 간편하게</h2>
+                    <h1>수수료 0원 송금 서비스</h1>
+                    <p>아이토스는 언제, 어디서, 누구나 보내더라도 수수료 0원<br> 여러건의 이체도 몇번의 터치로 쉽게 보낼 수 있습니다.</p>
+                </hgroup>
+                <aside data-aos='fade-up' data-aos-duration='2000'>보내는 계좌
+                    <article>
+                        <a class='icon kb' href='javascript:;'></a>
+                        <p>국민은행 계좌<br><span>국민 110123456789</span></p>
+                        <var>1478400</var>
+                    </article>
+                    <article>
+                        <a class='icon shin' href='javascript:;'></a>
+                        <p>국민은행 계좌<br><span>국민 110123456789</span></p>
+                        <var>584400</var>
+                    </article>
+                </aside>
+            </div>
+            <div>
+                <aside class='phone-small' data-aos='fade-left' data-aos-duration='1500'></aside>
+                <aside class='phone-large' data-aos='fade-left' data-aos-duration='1500'></aside>
+            </div>
+        </section>
+    </main>
+    <main id='consume'>
+        <section>
+            <div data-aos='zoom-in' data-aos-duration='1000'>
+                <aside class='phone-large'></aside>
+                <aside class='phone-small'></aside>
+            </div>
+            <div>
+                <hgroup>
+                    <h2>똑똑한 소비생활</h2>
+                    <h1>내 지출부터 일정까지</h1>
+                    <p>아이토스에서 계좌/카드를 연동해보세요<br>잔고,대출과 일자별 소비와 수입을 똑똑하게 확인할 수 있습니다.</p>
+                </hgroup>
+            </div>
+            <img src='img/main/img/consume/img_consume_2.svg' alt='arrow'>
+        </section>
+    </main>
+    <main id='loan' data-aos='fade-up'>
+        <section>
+            <hgroup>
+                <h2>차별화된 저금리로</h2>
+                <h1>부담없는 대출</h1>
+                <p style='margin-bottom:30px;'>고객을 위한 저금리 정책으로,<br>차별화된 금리를 제공합니다.</p>
+            </hgroup>
+            <canvas id='linechart'></canvas>
+        </section>
+    </main>
+    <main id='credit'>
+        <section>
+            <div class='phone-large' data-aos='fade-up' data-aos-duration='1500'>
+                <canvas id='donut_2' width='160' height='160'></canvas>
+                <p>신용점수&nbsp;<i class='far fa-question-circle'></i><br>
+                    <span>704</span><em>점</em>
+                </p>
+            </div>
+            <div data-aos='fade-left' data-aos-duration='1500'>
+                <hgroup>
+                    <h2>언제 어디서든</h2>
+                    <h1>신용점수 확인하기</h1>
+                    <p>언제 어디서든 원할 때 간편하게 신용점수를 확인하세요.</p>
+                </hgroup>
+                <img src='img/main/img/credit/img_credit_02.png' alt='card'>
+            </div>
+            <canvas id='donut' width='600' height='600' style='transform: rotate(70deg);'></canvas>
+        </section>
+    </main>
+    <main id='group'>
+        <section>
+            <hgroup>
+                <h2>회비부터 여행자금까지</h2>
+                <h1>모임통장 만들기</h1>
+                <p>아이토스 회원이라면 연락처만으로 간단하게<br>
+                    수시로 확인할 필요없이 실시간으로 모임통장의<br>
+                    입출금 내역의 확인이 가능합니다.</p>
+            </hgroup>
+            <div></div>
+        </section>
+    </main>
+    <main id='tech'>
+        <section style='position: relative; text-align: center;'>
+            <hgroup>
+                <h2>최고의 서비스를 위한</h2>
+                <h1 style='color: #fff; margin-bottom: 30px;'>최신 IT 기술</h1>
+            </hgroup>
+            <figure class='phone-large' data-aos='fade-up' data-aos-duration='1500'>
+                <img src='img/main/img/tech/iPhone12_Clay_Shadow.png' alt='phone'>
+            </figure>
+            <aside class='orbit__wrap rotate'>
+                <code class='orbit'></code>
+                <article class='tooltip'>FACE ID,QR,지문,보안 서비스</article>
+                <article class='tooltip'>어플 하나로 모든 서비스를 통합</article>
+                <article class='tooltip'>유저 친화적으로 설계된 UX/UI 디자인</article>
+                <article class='tooltip'>24시간 운영하는 고객센터</article>
+            </aside>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <div>
+                <aside>
+                    <nav>서비스
+                        <a>공지사항</a>
+                        <a>자주묻는질문</a>
+                        <a>계정일시잠금</a>
+                        <a>고객센터</a>
+                    </nav>
+                    <nav>회사
+                        <a>회사소개</a>
+                        <a>증권</a>
+                        <a>페이</a>
+                        <a>뱅크</a>
+                    </nav>
+                    <nav>문의
+                        <a>사업제휴</a>
+                        <a>광고문의</a>
+                        <a>마케팅 PR</a>
+                        <a>IR</a>
+                    </nav>
+                    <nav>고객센터
+                        <a>전화 1599-1234</a>
+                        <a>이메일(고객) support@itoss.im</a>
+                        <a>이메일(외부기관) support-af@itoss.im</a>
+                        <a>민원접수</a>
+                    </nav>
+                </aside>
+                <nav>
+                    <a href='javascript:;'><i class='fab fa-instagram'></i></a>
+                    <a href='javascript:;'><i class='fab fa-youtube'></i></a>
+                    <a href='javascript:;'><i class='fab fa-facebook-f'></i></a>
+                    <a href='javascript:;'><i class='fab fa-twitter'></i></a>
+                </nav>
+            </div>
+            <div>
+                <h3>Copyright © Itos Corp. All rights reserved.</h3>
+                <nav class='footer__law'>
+                    <a href='javascript:;'>서비스 이용약관</a>
+                    <a href='javascript:;'>통합 금융정보 서비스약관</a>
+                    <a href='javascript:;'>개인정보처리방침</a>
+                    <a href='javascript:;'>위치기반서비스 이용약관</a>
+                    <a href='javascript:;'>영상처리기기 운영방침관리</a>
+                </nav>
+            </div>
+        </section>
+    </footer>
+</body>
+<script src='https://code.jquery.com/jquery-3.6.0.js'></script>
+<script src='https://code.jquery.com/ui/1.13.0/jquery-ui.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/chart.js'></script>
+<script src='js/chart.js'></script>
+<script>
+    function drawOrbit(callback) {
+        let html = '';
+        let px = 400;
+        let py = 400;
+        let x, y;
+        for (let i = 0; i < 360; i += 12) {
+            x = px + Math.cos(Math.PI * i / 180) * 350 / 2;
+            y = py + Math.sin(Math.PI * i / 180) * 350;
+            html += `<div class='ball' style='top:${x}px; left:${y}px; background:#007aff;'></div>`;
+        }
+        for (let i = 0; i < 360; i += 8) {
+            x = px + Math.cos((Math.PI * i + 12) / 180) * 450 / 2;
+            y = py + Math.sin((Math.PI * i + 12) / 180) * 450;
+            html += `<div class='ball' style='top:${x}px; left:${y}px; background:#283593;'></div>`;
+        }
+        $('.orbit').html(html);
+        callback();
+    }
+    function addHoverEvent() {
+        $('.ball').eq(10).attr('class', 'ux tech_icon');
+        $('.ball').eq(19).attr('class', 'security tech_icon');
+        $('.ball').eq(65).attr('class', 'servicecenter tech_icon');
+        $('.ball').eq(34).attr('class', 'app tech_icon');
+        $('.tech_icon').hover(function () {
+            let top = parseInt(String($(this).css('top')).replace(/px/d, ''));
+            let left = parseInt(String($(this).css('left')).replace(/px/d, ''));
+            function active(param) {
+                $('.tooltip').eq(param).css('top', (top) + 'px').css('left', (left + 65) + 'px').css('opacity', 1);
+            }
+            if ($(this).hasClass('security')) {
+                $('.tooltip').eq(0).css('top', (top) + 'px').css('left', -220 + 'px').css('opacity', 1);
+            }
+            if ($(this).hasClass('app')) {
+                active(1);
+            }
+            if ($(this).hasClass('ux')) {
+                active(2);
+            }
+            if ($(this).hasClass('servicecenter')) {
+                $('.tooltip').eq(3).css('top', (top) + 'px').css('left', -300 + 'px').css('opacity', 1);
+            }
+        }, function () {
+            $('.tooltip').css('opacity', 0);
+        });
+        $('.ball').each(function () {
+            let top = parseInt(String($(this).css('top')).replace(/px/gi, ''));
+            let left = parseInt(String($(this).css('left')).replace(/px/gi, ''));
+            if (top > 500 && top < 700 && left > 200 && left < 600) {
+                $(this).css('z-index', 1000);
+            }
+        });
+    }
+    drawOrbit(addHoverEvent);
+    function bannerLoading() {
+        $('.banner__text').addClass('active');
+        setTimeout(() => {
+            $('.banner__btn').addClass('active');
+        }, 400);
+        $('.banner__background').addClass('active');
+        $('.banner__phone').addClass('active');
+        $('.banner__paper').addClass('active');
+    }
+    bannerLoading();
+    let arr = [];
+    for (i = 0; i < document.querySelectorAll('var').length; i++) {
+        arr.push(document.querySelectorAll('var')[i].innerHTML);
+    }
+    function numberLoading(number, i) {
+        $({ val: 0 }).animate({ val: number }, {
+            duration: 1500,
+            step: function () {
+                var num = comma(Math.floor(this.val));
+                document.querySelectorAll('var')[i].innerHTML = num;
+            },
+            complete: function () {
+                var num = comma(Math.floor(this.val));
+                document.querySelectorAll('var')[i].innerHTML = num;
+            }
+        });
+    }
+    function comma(x) {
+        return String(x).replace(/\B(?=(\d{3})+(?!\d))/g, ',') + '원';
+    }
+    function once(func) {
+        let isDone, result;
+        return function () {
+            if (isDone) { return result; }
+            isDone = true;
+            return result = func.apply(this, arguments);
+        }
+    }
+
+    let service = once(
+        function () {
+            for (i = 0; i < arr.length; i++) {
+                numberLoading(arr[i], i);
+            }
+        }
+    );
+    let consume = once();
+    let loan = once(
+        function () {
+            const ctx = document.getElementById('linechart').getContext('2d');
+            const myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['2017', '2018', '2019', '2020', '2021', '2022'],
+                    datasets: [{
+                        label: '아이토스',
+                        data: [2, 4, 2, 3, 1, 3],
+                        backgroundColor: [
+                            'rgba(0, 122, 255, 0.2)',
+                        ],
+                        borderColor: [
+                            'rgba(0, 122, 255, 1)',
+                        ],
+                        borderWidth: 1
+                    },
+                    {
+                        label: '평균 금리',
+                        data: [4, 6, 3, 5, 3, 4],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                        ],
+                        borderWidth: 1
+                    },
+                    ]
+                },
+                options: {
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                        },
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                borderDash: [3],
+                            }
+
+                        },
+                        y: {
+                            min: 0,
+                            max: 7,
+                            grid: {
+                                borderDash: [3],
+                            }
+                        }
+                    },
+                    elements: {
+                        line: {
+                            tension: 0.2
+                        }
+                    }
+                }
+            });
+        }
+    );
+    let credit = once(
+        function () {
+            bigChart.init();
+            smallChart.init();
+        }
+    );
+    let group = once(
+        function () {
+            $('.group__right').addClass('active');
+        }
+    );
+    let tech = once(
+        function () {
+        }
+    );
+    let window_scroll = 0;
+    $(window).scroll(function () {
+        window_scroll = $(this).scrollTop();
+        window_scroll > $('#service').offset().top - $('#service').height() ? service() : false;
+        window_scroll > $('#consume').offset().top - $('#consume').height() ? consume() : false;
+        window_scroll > $('#loan').offset().top ? loan() : false;
+        window_scroll > $('#credit').offset().top ? credit() : false;
+        window_scroll > $('#group').offset().top - $('#group').height() / 3 ? group() : false;
+        window_scroll > $('#tech').offset().top ? tech() : false;
+    });
+    $('html, body').on('mousewheel DOMMouseScroll', function (e) {
+        var E = e.originalEvent;
+        var delta = 0;
+        if (E.detail > 0) {
+            delta = E.detail * -40;
+        } else {
+            delta = E.wheelDelta;
+        }
+        if (delta < 0) {
+            $('.remocon').addClass('active');
+        } else { // delta > 0
+            window_scroll > 0 ? false : $('.remocon').removeClass('active');
+        }
+    });
+    $('.remocon').click(function () {
+        $('html').animate({ scrollTop: '0' }, 2000, 'easeInOutCubic');
+    });
+</script>
+<script>
+    AOS.init();
+</script>
+
+</html>

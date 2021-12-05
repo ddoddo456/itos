@@ -1,0 +1,82 @@
+@import 'setting.scss';
+#banner{height: 650px; padding:0; margin-top: 60px; background: url(../img/sub4/img_bg.png) no-repeat;
+  section{position: relative; display: flex; justify-content: center; align-items: center;
+    hgroup{color: #fff; text-align: center;
+      h2{color: #fff; font: 500 28px $Noto;}
+      h1{}
+    }
+    aside{position: absolute; width: 1200px; bottom: 0px; left: 0; transform: translate(0,50%); display: flex; justify-content: space-between; text-align: center;
+      article{display: flex; justify-content: center; align-items: center; flex-direction: column; width: 360px; height: 180px; margin-top: 70px; opacity: 0.5; background: #fafafa;
+        h3{font: 500 22px $Noto;}
+        hr{width: 100px; height: 2px; margin:20px 0; background: #225783;}
+      }
+      article:nth-child(1){transition: margin ease 1s 0.1s, opacity ease 1s 0.1s;}
+      article:nth-child(2){transition: margin ease 1s 0.2s, opacity ease 1s 0.2s;}
+      article:nth-child(3){transition: margin ease 1s 0.3s, opacity ease 1s 0.3s;}
+
+      article.active{margin-top: -30px; opacity: 1;}
+    }
+  }
+}
+#employ{
+  section{
+    h1{font: 500 38px $Noto; color: #283593;}
+    h2{display: flex; align-items: center; margin: 15px 0; font: 400 28px $Noto; 
+      hr{width: 10px; height: 2px; background: #999; margin-right: 10px;}
+      span{display: flex; align-items: center; margin-left: auto; font: 500 16px $Noto; color: #999;}
+    }
+    .swiper-container{width: calc(100% + 30px); margin-left: -15px; height: 400px; overflow: hidden;
+      .swiper{width: 1200px; height: 380px; overflow: visible; margin: 0 auto;
+        aside{display: flex; justify-content: space-between;
+          &:first-child{margin-bottom: 40px;}
+          article{position:relative; display: flex; justify-content: space-between; flex-direction: column; width: calc(25% - 30px); height: 170px; box-sizing: border-box; padding:20px; border: 1px solid #999;
+            hgroup{
+              h3{font: 400 18px $Noto; color: #000;}
+              h4{font: 400 16px $Noto; color: #999;}
+              h5{font: 400 16px $Noto; color: #000;}
+              h6{font: 400 14px $Noto; color: #999;}
+            }
+            div{position: absolute; top:31px; right:20px; width: 25px; height: 2px; background: #225783;}
+          }
+        }
+        .swiper-pagination {
+          position: absolute !important;
+          bottom: -25px !important; // should be fine as is, but adjust to your liking
+        }
+        .swiper-button-prev{left: -15px !important;}
+        .swiper-button-next{right: -15px !important;}
+      }
+    }
+  }
+}
+#goal{padding: 40px; background: #4E5F8C; color: #fff; text-align: center;
+  h1{font: 500 40px $Noto;}
+  p{font: 500 24px $Noto; margin:15px 0;}
+  nav{display: flex; justify-content: center; align-items: center; width: 280px; margin: 30px auto 0; font: 500 16px $Noto; color: #4E5F8C; background: #fff; border-radius: 10px;
+    a{padding: 10px 15px;}
+    hr{width: 2px; height:15px; margin-top: 2px; background: #4E5F8C;}
+  }
+}
+#process{
+  section{
+    h1{display: flex; align-items: center; padding: 0; margin: 0; font: 500 38px $Noto; color: #283593;
+      hr{width: 10px; height: 2px; background: #999; margin-right: 10px;}
+      span{display: flex; align-items: center; margin-left: auto; font: 500 16px $Noto; color: #999;}
+    }
+    div{position: relative; display: flex; justify-content: space-between; align-items: center; width: 970px; margin: 80px auto;
+      figure{position: relative; display: flex; justify-content: center; align-items: center; width: 130px; height: 130px; background: #eaeaea; border-radius: 50%; text-align: center; transition: all 0.5s ease;
+        img{width: auto;}
+        figcaption{position: absolute; bottom: -30px; font: 500 18px $Noto; margin-top: 15px; color: #eaeaea; transition: color 0.5s ease}
+      }
+      figure.active{background: #007aff;
+        figcaption{color: #000;}
+      }
+      figure:hover{background: #007aff;
+        figcaption{color: #000;}
+      }
+      hr.bar{position: absolute; width: 970px; height: 4px; background: #eaeaea; z-index: -2;}
+      hr.gage{position: absolute; width: 0px; height: 4px; background: #007aff; z-index: -1;}
+    }
+    ul{list-style-type : disc; padding: 50px 0 0 30px; font: 400 16px $Noto; color: #999;}
+  }
+}

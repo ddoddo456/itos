@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='css/main.css' type='text/css'>
+  <link rel='stylesheet' href='https://unpkg.com/swiper@7/swiper-bundle.min.css' />
+  <title>itos</title>
+</head>
+
+<body>
+  <header>
+    <a href='index.html' class='logo'></a>
+    <nav>
+      <a><i class='fas fa-qrcode'></i></a>
+      <a><i class='fas fa-bell'></i></a>
+    </nav>
+  </header>
+  <main id='banner'>
+    <section>
+      <div>
+        <p>공인인증서 없이<br><em>빠른 송금을 하고싶다면?</em></p>
+        <img src='img/img_main_2.png' alt='card'>
+      </div>
+      <a href='rimit.html'>송금하러가기</a>
+    </section>
+  </main>
+  <main id='account'>
+    <h1 class='right-arrow'><a href='account.html'>계좌</a></h1>
+    <aside>
+      <article><a class='icon itos' href='javascript:;'></a>아이토스<span>1,500,000<em>원</em></span></article>
+      <article><a class='icon kb' href='javascript:;'></a>국민은행<span>500,000<em>원</em></span></article>
+      <article><a class='icon shin' href='javascript:;'></a>신한은행<span class='box'>잔액보기</span></article>
+    </aside>
+  </main>
+  <main id='consume'>
+    <h1 class='right-arrow'><a href='consume.html'>소비</a></h1>
+    <section>
+      <aside>
+        <img src='img/img_main_0.png' alt=''>
+        <div>이번달 쓴 금액<br><span>지난달 쓴 금액</span></div>
+        <div>1,500,000원<br><span>500,000원</span></div>
+      </aside>
+      <p><i class="fas fa-info-circle"></i>&nbsp;지난달 때보다 <span>100만원 더</span> 지출하셨어요!</p>
+    </section>
+  </main>
+  <main id='credit'>
+    <h1 class='right-arrow'><a href='credit.html'>신용</a></h1>
+    <section>
+      <div>
+        <canvas id='donut' width='200' height='200'></canvas>
+        <p>신용점수<br><span>704</span><em>점</em></p>
+      </div>
+      <nav>
+        <a href='javascript:;'>상위<br><span>70</span><em>%</em></a>
+        <a href='javascript:;'>조회/변경<br><span>10</span><em>건</em></a>
+      </nav>
+      <button>신용점수 올리기</button>
+    </section>
+  </main>
+  <main id='loan'>
+    <h1 class='right-arrow'><a href='loan.html'>대출</a></h1>
+    <section>
+      <a href='javascript:;'><img src='img/img_loan_0.png' alt='대출'></a>
+      <p>대출한도조회<br><span>신용점수</span> <em>704점, 25세</em></p>
+      <div class='box'>조회하기</div>
+    </section>
+    <aside>
+      <article class='right-arrow border-bottom'>
+        <a class='icon ok' href='javascript:;'></a>
+        <p>ok증권<br><span>중금리</span> <em>5.8%~16.8%</em></p>
+      </article>
+      <article class='right-arrow border-bottom'>
+        <a class='icon lotte' href='javascript:;'></a>
+        <p>롯데캐피탈<br><span>중금리</span> <em>5.8%~16.8%</em></p>
+      </article>
+      <article class='right-arrow'>
+        <a class='icon sermin' href='javascript:;'></a>
+        <p>서민은행<br><span>중금리</span> <em>5.8%~16.8%</em></p>
+      </article>
+    </aside>
+  </main>
+  <main id='adventage'>
+    <h1 class='right-arrow'><a href='adventage.html'>혜택</a></h1>
+    <div class='swiper'>
+      <div class='swiper-wrapper'>
+        <div class='swiper-slide' style='background: #477A38;'>
+          <div class='icon starbucks'></div>
+          <p>스타벅스 결제시,<br>
+            <img src='img/img_main_1.png' alt='coin' style='width: 20px; height: 20px;'> <span>3% 캐시백 혜택</span>
+          </p>
+        </div>
+        <div class='swiper-slide' style='background: #ffbc0d;'>
+          <div class='icon mcdonald'></div>
+          <p>
+            전 메뉴<br>
+            <i class='fas fa-ticket-alt'></i>&nbsp;&nbsp;<span>10% 할인쿠폰 증정</span>
+          </p>
+        </div>
+        <div class='swiper-slide' style='background: #7F67A3;'>
+          <div class='icon megabox'></div>
+          <p>
+            최신 개봉 영화<br>
+            <img src='img/img_main_1.png' alt='coin' style='width: 20px; height: 20px;'> <span>5% 캐시백</span>
+          </p>
+        </div>
+        <div class='swiper-slide' style='background: #E3877D;'>
+          <div class='icon cgv'></div>
+          <p>
+            10회 이용시<br>
+            <i class='fas fa-ticket-alt'></i>&nbsp;&nbsp;<span>팝콘 쿠폰 증정</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <main id='mypage'>
+    <h1 class='right-arrow'><a href='mypage.html'>마이페이지</a></h1>
+    <section>
+      <p><img src='img/img_mypage_0.png' alt='내정보'><span>이나경 님</span><i class='fas fa-chevron-right'></i></p>
+      <nav>
+        <a href='javascript:;'>고객센터</a>
+        <a href='javascript:;'>신용정보</a>
+        <a href='javascript:;'>공지사항</a>
+      </nav>
+    </section>
+  </main>
+  <main id='group'>
+    <h1 class='right-arrow'><a href='group.html'>모임통장</a></h1>
+    <section>
+      <p>거래내역, <br><span>멤버들과 함께하세요.</span></p>
+      <nav>
+        <a href=''><i class='fas fa-users'></i>최대 100명까지!</a>
+        <a href=''><i class='fas fa-history'></i>동시에 모두가 동일하게!</a>
+        <a href=''><i class='fas fa-piggy-bank'></i>회비입금 쉽고 간편하게!</a>
+      </nav>
+    </section>
+  </main>
+  <footer>
+    <ul>
+      서비스
+      <li>공지사항</li>
+      <li>자주묻는질문</li>
+      <li>공동인증서 관리</li>
+      <li>고객센터</li>
+    </ul>
+    <ul>
+      회사
+      <li>회사 소개</li>
+      <li>오시는 길</li>
+      <li>채용</li>
+      <li>공고</li>
+    </ul>
+    <ul>
+      문의
+      <li>사업 제휴</li>
+      <li>광고 문의</li>
+      <li>인증 사업 문의</li>
+      <li>마케팅 & PR</li>
+    </ul>
+    <ul>
+      고객센터
+      <li>전화: 1577-1588</li>
+      <li>이메일(고객전용): support@itoss.im</li>
+      <li>이메일(외부기관): support-af@itoss.im</li>
+      <li>민원 접수</li>
+    </ul>
+    <ul>
+      Copyright © Itos Corp. All rights reserved.
+      <li>서비스 이용약관</li>
+      <li>통합 금융정보 서비스 약관</li>
+      <li>개인정보 처리방침</li>
+      <li>위치기반서비스 이용약관</li>
+    </ul>
+  </footer>
+  <div id='darkness'></div>
+  <code id='qr'>
+    <img src='img/img_main_3.png' alt='qr'>
+    <div>
+      <em>인증을 위한 QR코드</em><br><br>
+      인증이 필요한 기기에게<br>
+      위의 QR 코드를 보여주세요.
+    </div>
+    <button class='close'>취소</button>
+  </code>
+  <code id='record'>
+    <h1>거래내역<a class='close' href='javascript:;'><i class='fas fa-times'></i></a></h1>
+    <aside class='gap'>
+      <h2>12월 27일</h2>
+      <article><a class='icon plus' href='javascript:;'></a>안원균 <span><var>+5,000,000</var><em>원</em></span></article>
+      <article><a class='icon plus' href='javascript:;'></a>남동현<span><var>+5,000,000</var><em>원</em></span></article>
+    </aside>
+    <aside class='gap'>
+      <h2>12월 26일</h2>
+      <article><a class='icon plus' href='javascript:;'></a>권효진<span><var>+5,000,000</var><em>원</em></span></article>
+      <article><a class='icon minus' href='javascript:;'></a>백종준<span><var>-1,400,000</var><em>원</em></span></article>
+      <article><a class='icon minus' href='javascript:;'></a>고준우<span><var>-2,800,000</var><em>원</em></span></article>
+    </aside>
+    <aside class='gap'>
+      <h2>12월 25일</h2>
+      <article><a class='icon plus' href='javascript:;'></a>산타클로스<span><var>+20,000</var><em>원</em></span></article>
+      <article><a class='icon minus' href='javascript:;'></a>안수지<span><var>-10,000</var><em>원</em></span></article>
+      <article><a class='icon minus' href='javascript:;'></a>안수균<span><var>-2,800</var><em>원</em></span></article>
+      <article><a class='icon minus' href='javascript:;'></a>또또<span><var>-100</var><em>원</em></span></article>
+      <article><a class='icon minus' href='javascript:;'></a>뚜비<span><var>-200</var><em>원</em></span></article>
+    </aside>
+  </code>
+</body>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+<script src='https://unpkg.com/swiper@7/swiper-bundle.min.js'></script>
+<script src='js/chart.js'></script>
+<script>
+  $('header nav a').click(function () {
+    let index = $(this).index();
+    if (index == 0) {
+      $('#darkness').show();
+      $('#qr').show();
+    } else {
+      $('#darkness').show();
+      $('#record').show();
+    }
+  });
+  $('#darkness , .close').click(function () {
+    $('#darkness').hide();
+    $('code').hide();
+  });
+  $('var').each(function () {
+    let text = $(this).text();
+    if (text.match(/\+/gi) == '+') {
+      $(this).css('color', '#007aff')
+    }
+    if (text.match(/\-/gi) == '-') {
+      $(this).css('color', '#ff0000')
+    }
+  });
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 'auto',
+    centeredSlides: true,
+  });
+  let chart = new doughnutChart('donut', {
+    x: 100,
+    y: 100,
+    r: 100,
+    lineWidth: 7,
+    degree: 270,
+  });
+  chart.init();
+</script>
+
+</html>

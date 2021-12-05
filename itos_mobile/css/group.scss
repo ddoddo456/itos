@@ -1,0 +1,79 @@
+@import 'setting.scss';
+main{display: none; padding: 15px;}
+#darkness{
+  display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 10;
+}
+header{
+  p{width: calc(100% + 30px); padding: 50px 0; margin-left: -15px; background: #007aff; text-align: center; font: 500 16px $Noto; color: #fff;
+    span{font: bold 28px $Lato;}
+    em{font: 400 26px $Noto;}
+  }
+  nav{display: flex; text-align: center; font: 500 16px $Noto; color: #999;
+    a{width: calc(100% / 3); margin:20px 0; border-right: 2px solid #eaeaea; cursor: pointer;}
+    a.active{color: #000;}
+  }
+}
+#due{display: block;
+  nav{display: flex; align-items: center; height: 70px;
+    p{
+      font: 400 14px $Noto;
+      span{font: 400 12px $Lato; color: #999;}
+    }
+    i{margin-left: auto;}
+  }
+  div{padding: 30px 0; font: 400 14px $Noto; color: #666;
+    span{display: block; margin-bottom: 10px; font: 500 16px $Noto; color: #000;}
+  }
+  button{@include button(#fff,#007aff); display: block; width: 100%; padding: 15px;}
+}
+#record{padding-bottom: 20px;
+  aside{
+    article{display: flex; font: 400 14px $Noto;
+      p{margin-left: auto; font: 400 12px $Lato; color: #999;}
+    }
+  }
+  nav{display: flex;
+    a{width: 50%; margin: 10px; padding: 18px;}
+    a:nth-child(1){@include button(#fff,#007aff);}
+    a:nth-child(2){@include button(#007aff,#fff,#007aff);}
+  }
+}
+#friend{
+  button{@include button(#007aff,#fff,#007aff); display: block; width: 100%; padding: 15px; margin-top: 30px;}
+}
+code{display: none;}
+#form{padding: 40px 20px; width: calc(100% - 40px);
+  h1{padding:0 0 0 30px; margin:0 0 20px 0;}
+  span{font: 400 12px $Noto; color: #666;
+    i{color: #007aff;}
+  }
+}
+#choice{position: fixed; display: block; left: 0; bottom: -700px; width: calc(100% - 40px); padding:20px; border-radius: 20px 20px 0 0; background: #fff; z-index: 11; transition: all 0.5s ease;
+  nav{display: flex;
+    .name{margin-right: 0;}
+    div{position:relative; display: flex; flex-direction: column; justify-content: center; align-items: center; margin-right: 15px;
+      button{position: absolute; right: 0; top:0; width: 15px; height: 15px; padding: 0; margin: 0; border:0; background: #ccc; border-radius: 50%; color: #fff; font-size: 10px;}
+    }
+  }
+  aside{height: 300px; overflow: auto;
+    article{
+      p{
+        var{font: 500 14px $Noto;}
+        span{font: 400 12px "Lato", sans-serif; color:#999;}
+      }
+      i{margin-left: auto;}
+    }
+  }
+  button{@include button(#007aff,#fff,#007aff); width: 40%; padding: 15px 0; margin: -20px auto 0; cursor: pointer;}
+}
+#choice.active{display: block; bottom: 0; transition: all 0.5s ease;}
+#success{padding: 20 15px; box-sizing: border-box; text-align: center; width: 100%; top:100px; left: 0;
+  p{margin-bottom: 50px; font: 400 24px $Noto;
+    em{font: 500 24px $Noto;}
+    span{font: 400 12px $Noto; color: #999;
+      a{color: #464646;}
+    }
+  }
+  button{display: block; width: 100%; padding: 20px; font: 500 16px $Noto; border-radius:10px; text-align: center; color: #fff; background: #007AFF; cursor: pointer;}
+  button.second{@include button(#007AFF,#fff,#007AFF); margin-top: 15px;}
+}

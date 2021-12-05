@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='css/adventage.css' type='text/css'>
+  <title>itos</title>
+</head>
+
+<body>
+  <main id='first'>
+    <h1 class='left-arrow'><a href='index.html'>혜택</a></h1>
+    <aside>
+      <article class="right-arrow">
+        <a class="name" href="">P</a>
+        <p>이나경님의 포인트<br>1,000원</p>
+      </article>
+    </aside>
+    <section>
+      <img src='img/img_adventage_0.png' alt=''>
+      </svg>
+      <p><span>아이토스 프라임</span>을 지금 만나러 가보세요!</p>
+    </section>
+  </main>
+  <main id="mission">
+    <hgroup>
+      <h3>원하는 브랜드에서</h3>
+      <h4>캐시백도 자유롭게</h4>
+    </hgroup>
+    <nav>
+      <a class='icon starbucks'></a>
+      <a class='icon megabox'></a>
+      <a class='icon cgv'></a>
+      <a class='icon mcdonald'></a>
+    </nav>
+    <button>캐시백 받기</button>
+  </main>
+  <main id="mission" style="background:#E0F2F1;">
+    <hgroup>
+      <h3>이번주 미션에서</h3>
+      <h4>50,000원 득템하기</h4>
+    </hgroup>
+    <img src='img/img_adventage_5.png' style="display:block; width: 100px; height: 120px; margin: 50px auto;" alt='우편함'>
+    <button>캐시백 받기</button>
+  </main>
+  <main id="mission">
+    <hgroup>
+      <h3>만보기 미션에서</h3>
+      <h4>매일 100원씩 받기</h4>
+    </hgroup>
+    <img src='img/img_adventage_6.png' style="display:block; width: 200px; height: 120px; margin: 50px auto;" alt='화살표'>
+    <button>캐시백 받기</button>
+  </main>
+  <footer>
+    <ul>
+      서비스
+      <li>공지사항</li>
+      <li>자주묻는질문</li>
+      <li>공동인증서 관리</li>
+      <li>고객센터</li>
+    </ul>
+    <ul>
+      회사
+      <li>회사 소개</li>
+      <li>오시는 길</li>
+      <li>채용</li>
+      <li>공고</li>
+    </ul>
+    <ul>
+      문의
+      <li>사업 제휴</li>
+      <li>광고 문의</li>
+      <li>인증 사업 문의</li>
+      <li>마케팅 & PR</li>
+    </ul>
+    <ul>
+      고객센터
+      <li>전화: 1577-1588</li>
+      <li>이메일(고객전용): support@itoss.im</li>
+      <li>이메일(외부기관): support-af@itoss.im</li>
+      <li>민원 접수</li>
+    </ul>
+    <ul>
+      Copyright © Itos Corp. All rights reserved.
+      <li>서비스 이용약관</li>
+      <li>통합 금융정보 서비스 약관</li>
+      <li>개인정보 처리방침</li>
+      <li>위치기반서비스 이용약관</li>
+    </ul>
+  </footer>
+  <code id='coin__wrap'>
+    <div id='coin'>
+      <div class='side-a'><img src='img/img_adventage_1.png' alt=''></div>
+      <div class='side-b'><img src='img/img_adventage_2.png' alt=''></div>
+    </div>
+  </code>
+</body>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+<script>
+  $('button').click(function () {
+    var flipResult = Math.random();
+    $('#coin').removeClass();
+    setTimeout(function () {
+      flipResult <= 0.5 ? $('#coin').addClass('heads') : $('#coin').addClass('tails');
+    }, 100);
+  });
+</script>
+
+</html>

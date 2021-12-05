@@ -1,0 +1,97 @@
+@import 'setting.scss';
+main{display: none;}
+header{ 
+  section:nth-child(1){padding-bottom: 25px; 
+    div:nth-child(2){color: #fff; border-radius: 20px; overflow: hidden;
+      p{padding: 20px; display: flex; align-items: center; background: #007AFF; position: relative; font: 500 18px $Noto;
+        i{margin-left: auto;}
+      }
+      nav{padding: 20px; display: flex; align-items: center; background: #0066EB; font: 400 14px $Noto;
+        a{display: block; width: calc(100%/3); text-align: center; border-right: 1px solid #fff; cursor: pointer;}
+      }
+      img{width: 50px; height: 50px; margin-right: 15px;}
+    }
+    div:nth-child(3){display: flex; align-items: center; padding: 17px; margin-top:20px; border-radius: 10px; background:#E3F2FD; font: 400 14px $Noto;
+      img{width: 24px; height: 24px;}
+      span{color: #007AFF;}
+    }
+  }
+  section:nth-child(2){
+    aside{
+      article{display: block; height: auto;
+        a{display: block; border-top: 1px solid #eaeaea; padding: 25px 0;
+        }
+      }
+    }
+  }
+}
+#myinfo{
+  section{padding-bottom: 30px;
+    p{position: relative; width: 80px; height: 80px; margin: 0 auto;
+      &::after{
+        content: '+'; position: absolute; bottom: 0; right: 0; background: #fafafa; color: #007AFF;
+        width: 30px; height: 30px; line-height: 28px; text-align: center; border-radius:50%; font-size: 26px;
+      }
+    }
+    button{@include button(#007AFF,#fafafa); display: block; width: 100px; padding:5px 0; margin: 15px auto 0 auto; font: 500 14px $Noto;}
+  }
+  aside{padding-bottom: 30px;
+    article{display: flex; align-items: center; height: 40px;
+      span{width: 30%; font: 400 14px $Noto; color: #999;}
+      em{width: 70%; font: 400 14px $Lato;}
+    }
+  }
+}
+#servicecenter{
+  section:nth-child(1){
+    div{padding:30px; background: #fafafa; text-align: center;
+      > a{@include button(#fff,#007AFF); display: block; width: 50px; padding: 5px 0; margin: 30px auto 20px auto; font: bold 14px $Lato;}
+      > p{font: 400 20px $Noto; margin-bottom: 50px;
+        span{font: 500 20px $Noto;}
+      }
+      nav{display: flex; justify-content: center; position:relative;
+        a{display: flex; flex-direction: column; width: 50%; font: 400 20px $Noto;
+          i{font-size: 30px; margin-bottom: 10px;}
+        }
+        &::after{content:''; position: absolute; width: 1px; height: 30px; top:10px; left: 50%; background: #eaeaea;}
+      }
+    }
+  }
+  section:nth-child(2){
+    aside{
+      article{height: auto; display: block;
+        div:nth-child(1){
+          display: flex; justify-content: space-between;
+          padding: 25px 0; border-bottom: 1px solid #eaeaea; font: 400 14px $Noto; line-height: 20px; cursor: pointer;
+          i{transition: all 0.5s ease;}
+          i.rotate{transform: rotate(180deg);}
+        }
+        div:nth-child(2){display: none; padding: 25px 0; background: #fafafa; font: 400 14px $Noto; color: #999;}
+      }
+    }
+    a{@include button(#999,#fff,#eaeaea); display: block;padding: 20px; margin-top:30px; font: 500 16px $Noto; color: #999;}
+  }
+}
+#notice{
+  section:nth-child(1){
+    aside{
+      article{height: auto; padding: 25px 0; border-bottom: 1px solid #eaeaea; font: 400 14px $Noto; line-height: 20px; cursor: pointer;
+        span{font: 400 12px $Lato; color: #999; margin-top: 5px;}
+      }
+    }
+    nav{display: flex; justify-content: center; font: 500 16px $Lato; margin-top: 50px;
+      a{width: 50px; text-align: center;}
+    }
+  }
+  section:nth-child(2){display: none; padding-bottom: 10px;
+    hgroup{
+      h3{font: 500 16px $Noto;}
+      h4{font: 400 14px $Lato; color: #999; margin-top: 3px;}
+    }
+    p{font: 400 14px $Noto; margin: 30px 0;}
+    nav{font: 500 12px $Noto; display: flex;
+      a{margin-right: 15px; padding: 10px; background:#fafafa; border-radius:10px; color: #007AFF;}
+    }
+    button{@include button(#007AFF,#fff,#007AFF); width: 100%; padding: 18px; margin: 30px 0; cursor: pointer;}
+  }
+}

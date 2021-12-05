@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='css/account.css' type='text/css'>
+  <title>itos</title>
+</head>
+
+<body>
+  <main id='account'>
+    <h1 class='left-arrow'><a href='index.html'>내 계좌</a></h1>
+    <div><b>총 계좌 <span>3</span>개</b> <b><span>1,500,000</span>원</b></div>
+    <aside>
+      <article>
+        <a class="icon itos" href=""></a>
+        아이토스
+        <span>1,000,000원</span>
+      </article>
+      <article>
+        <a class="icon kb" href=""></a>
+        국민은행
+        <span>50,000원</span>
+      </article>
+      <article>
+        <a class="icon shin" href=""></a>
+        신한은행
+        <span>10,000원</span>
+      </article>
+    </aside>
+    <button><i class='fas fa-link'></i>&nbsp;&nbsp;계좌 연결하기</button>
+  </main>
+  <main id='bank'>
+    <h1 class='left-arrow'><a href='account.html'>국민은행</a></h1>
+    <section>
+      <hgroup>
+        <h3>국민 <span>110123456789</span></h3>
+        <h4><span>500,000</span>원</h4>
+      </hgroup>
+      <button><a href='rimit.html'>송금하러가기</a></button>
+    </section>
+    <div class='gap'>
+      <select>
+        <option value='전체'>전체</option>
+        <option value='입금'>입금</option>
+        <option value='출금'>출금</option>
+      </select>
+    </div>
+    <aside>
+      <h2>9월 28일&nbsp;<span>3</span>건</h2>
+      <article class="gap">
+        <a class="icon plus" href=""></a>
+        <p>권효진<br><span>3</span>건</p>
+        <span>1,500,000원<br><em>3,100,000원</em></span>
+      </article>
+    </aside>
+  </main>
+  <footer>
+    <ul>
+      서비스
+      <li>공지사항</li>
+      <li>자주묻는질문</li>
+      <li>공동인증서 관리</li>
+      <li>고객센터</li>
+    </ul>
+    <ul>
+      회사
+      <li>회사 소개</li>
+      <li>오시는 길</li>
+      <li>채용</li>
+      <li>공고</li>
+    </ul>
+    <ul>
+      문의
+      <li>사업 제휴</li>
+      <li>광고 문의</li>
+      <li>인증 사업 문의</li>
+      <li>마케팅 & PR</li>
+    </ul>
+    <ul>
+      고객센터
+      <li>전화: 1577-1588</li>
+      <li>이메일(고객전용): support@itoss.im</li>
+      <li>이메일(외부기관): support-af@itoss.im</li>
+      <li>민원 접수</li>
+    </ul>
+    <ul>
+      Copyright © Itos Corp. All rights reserved.
+      <li>서비스 이용약관</li>
+      <li>통합 금융정보 서비스 약관</li>
+      <li>개인정보 처리방침</li>
+      <li>위치기반서비스 이용약관</li>
+    </ul>
+  </footer>
+</body>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+<script>
+  $('#account article').click(function () {
+    $('#account').hide();
+    $('#bank').show();
+  });
+  $('select').change(function () {
+    if ($(this).val() == '입금') {
+      $('#bank .list > ul').css('display', 'flex');
+      $('#bank .list').each(function () {
+        let length = $(this).find('.plus').length;
+        $(this).find('.list__title').find('span').text(length);
+      });
+      $('.minus').parent('ul').css('display', 'none');
+      $('.list__title > span').text();
+    }
+    if ($(this).val() == '출금') {
+      $('#bank .list > ul').css('display', 'flex');
+      $('#bank .list').each(function () {
+        let length = $(this).find('.minus').length;
+        $(this).find('.list__title').find('span').text(length);
+      });
+      $('.plus').parent('ul').css('display', 'none');
+      $('.list__title > span').text();
+    }
+    if ($(this).val() == '전체') {
+      $('#bank .list').each(function () {
+        let length = $(this).find('ul').length;
+        $(this).find('.list__title').find('span').text(length);
+      });
+      $('#bank .list > ul').css('display', 'flex');
+    }
+  });
+</script>
+
+</html>

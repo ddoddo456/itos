@@ -1,0 +1,74 @@
+@import 'setting.scss';
+#banner{height: 600px; padding: 0; margin:60px 0 160px 0; background: linear-gradient(180deg, #007aff 0%, #283593 100%); color: #fff; 
+  section{
+    position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center;
+    hgroup{text-align: center; 
+      h2{font: 400 26px $Noto; color: #fff;}
+      h1{font: 500 38px $Noto; margin-bottom: 15px;}
+    }
+    img{width: 200px; height: 200px;}
+    p{margin-top: 15px;
+      span{position: relative; padding: 10px; color: #A1F791;;
+        &::after{content: ''; position: absolute; top:50%; left: 0; width: 5px; height: 5px; margin-top: -2.5px; border-radius: 50%; background:#A1F791;}
+      }
+    }
+    aside{
+      position: absolute; top: 100%; transform: translate(0,-50%); display: flex; justify-content: space-between; text-align: center; width: 100%;
+      display: flex; justify-content: space-between; align-items: center;
+      article{
+        display: flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0.4;
+        width: 200px; height: 200px; margin-top: 100px; background: #fafafa; border-radius:20px; cursor: pointer;
+        font: 500 16px $Noto; color: #666666; line-height: 35px; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        a{display: block;}
+        &:nth-child(1){transition: margin ease 1s 0.1s, opacity ease 1s 0.1s;}
+        &:nth-child(2){transition: margin ease 1s 0.2s, opacity ease 1s 0.2s;}
+        &:nth-child(3){transition: margin ease 1s 0.3s, opacity ease 1s 0.3s;}
+        &:nth-child(4){transition: margin ease 1s 0.4s, opacity ease 1s 0.4s;}
+        &:nth-child(5){transition: margin ease 1s 0.4s, opacity ease 1s 0.5s;}
+      }
+      article.active{margin-top: 0; opacity: 1 !important;}
+    }
+  }
+}
+#help{padding: 60px 0;
+  section{
+    h1{font: 500 32px $Noto; margin-bottom: 30px;}
+    aside{
+      article{
+        h3{font: 400 16px $Noto; position:relative; cursor: pointer; padding: 30px 70px; border-bottom: 1px solid #eaeaea;
+          &::before{@include icon('\f002'); position: absolute; left: 40px; top: 33px; color: #666666;} 
+          i{position: absolute; right: 40px; top: 33px; font-size: 20px; transition: all 0.5s ease; color: #666666; transform:rotate(0deg);}
+          i.active{transform: rotate(180deg);}
+        }
+        p{display: none; position:relative; padding: 30px 70px; background: #fafafa; font: 400 16px $Noto; color: #999;
+          &::before{content: 'A'; font: 500 22px $Noto; position: absolute; left: 42px; top: 24px; color: #666666;}
+        }
+      }
+    }
+  }
+}
+#card{padding: 30px 0;
+  section{
+    display: flex; justify-content: space-between; color: #fff; 
+    div:nth-child(1){background: #283593;}
+    div:nth-child(2){background: #0063B2;}
+    div{
+      display: flex; flex-direction: column; justify-content: space-between; width: calc(50% - 12.5px); box-sizing: border-box; padding: 40px 75px;  border-radius: 20px;
+      hgroup{
+        h1{font: 500 32px $Noto; color: #fff !important;}
+        h2{font: 400 16px $Noto; margin-bottom: 30px; color: #fff !important;}
+      }
+      ul{display: flex;
+        li{width: 50%; font: 400 16px $Noto; line-height: 30px;
+          span{font: bold 34px $Lato;}
+        }
+      }
+      a{display: block; width: 150px; padding: 15px 0px; font: 400 14px $Noto; text-align: center; border-radius: 10px; background: $point1;}
+    }
+  }
+}
+#question{padding: 60px 0;
+  section{
+    h1{font: 500 32px $Noto; display: flex; justify-content: space-between; align-items: center;  margin: 30px 0;}
+  }
+}

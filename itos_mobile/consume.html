@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='css/consume.css' type='text/css'>
+  <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.css' rel='stylesheet' />
+
+  <title>itos</title>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <main id='main' class='gap'>
+    <h1 class='left-arrow'><a href='index.html'>내 소비</a></h1>
+    <section>
+      <hgroup>
+        <h3>9월달 소비</h3>
+        <h4><span>1,500,000</span>원</h4>
+      </hgroup>
+      <p>
+        <i class='fas fa-exclamation-circle'></i> 지난달 때보다 <span>100만원 더</span> 지출하셨어요!
+      </p>
+    </section>
+    <aside>
+      <article class="right-arrow">
+        <a class='icon itos' href=""></a>
+        아이토스
+        <span>0원</span>
+      </article>
+      <article class="right-arrow">
+        <a class='icon kb' href=""></a>
+        국민카드
+        <span>500,000원</span>
+      </article>
+      <article class="right-arrow">
+        <a class='icon shin' href=""></a>
+        신한카드
+        <span>1,500,000원</span>
+      </article>
+    </aside>
+    <h2 class='right-arrow'>이번달 수입</h2>
+  </main>
+  <main id='month' class='gap'>
+    <div id='calendar'></div>
+    <aside>
+      <article>
+        <p class='day'><em>23</em><br>목</p>
+        <a class='icon plus'></a>
+        <p class='from'>권효진<br><em>10,000</em>원</p>
+      </article>
+      <article>
+        <p class='day'><em>20</em><br>월</p>
+        <a class='icon plus'></a>
+        <p class='from'>정혜진<br><em>30,000</em>원</p>
+      </article>
+    </aside>
+    <div class='month__btn'>더보기</div>
+  </main>
+  <main id='category'>
+    <h1>카테고리별 소비</h1>
+    <section>
+      <p>쇼핑을 가장 많이 했어요!</p>
+      <canvas id='piechart' width='450' height='300'></canvas>
+    </section>
+    <aside>
+      <article>
+        <a class="icon shopping"></a>
+        쇼핑
+        <span>500,000원</span>
+      </article>
+      <article>
+        <a class="icon food"></a>
+        음식
+        <span>500,000원</span>
+      </article>
+      <article>
+        <a class="icon beauty"></a>
+        미용
+        <span>500,000원</span>
+      </article>
+      <article>
+        <a class="icon medical"></a>
+        의료
+        <span>500,000원</span>
+      </article>
+    </aside>
+  </main>
+  <main id='charge'>
+    <hgroup>
+      <h3>매달 나가는 돈</h3>
+      <h4>총 <span>300,000</span>원</h4>
+    </hgroup>
+    <aside>
+      <article>
+        <a class='icon factory' href=''></a>
+        아파트 관리비
+        <span>내일</span>
+      </article>
+      <article>
+        <a class='icon phone' href=''></a>
+        통신비
+        <span>3일 뒤</span>
+      </article>
+      <article>
+        <a class='icon netflex' href=''></a>
+        정기구독료
+        <span>10일 예정</span>
+      </article>
+      <article>
+        <a class='icon medical' href=''></a>
+        보험료
+        <span>25일 예정</span>
+      </article>
+    </aside>
+  </main>
+  <footer>
+    <ul>
+      서비스
+      <li>공지사항</li>
+      <li>자주묻는질문</li>
+      <li>공동인증서 관리</li>
+      <li>고객센터</li>
+    </ul>
+    <ul>
+      회사
+      <li>회사 소개</li>
+      <li>오시는 길</li>
+      <li>채용</li>
+      <li>공고</li>
+    </ul>
+    <ul>
+      문의
+      <li>사업 제휴</li>
+      <li>광고 문의</li>
+      <li>인증 사업 문의</li>
+      <li>마케팅 & PR</li>
+    </ul>
+    <ul>
+      고객센터
+      <li>전화: 1577-1588</li>
+      <li>이메일(고객전용): support@itoss.im</li>
+      <li>이메일(외부기관): support-af@itoss.im</li>
+      <li>민원 접수</li>
+    </ul>
+    <ul>
+      Copyright © Itos Corp. All rights reserved.
+      <li>서비스 이용약관</li>
+      <li>통합 금융정보 서비스 약관</li>
+      <li>개인정보 처리방침</li>
+      <li>위치기반서비스 이용약관</li>
+    </ul>
+  </footer>
+</body>
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/chart.js'></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth',
+      locale: 'ko',
+      events: [
+        {
+          title: '-10,000',
+          start: '2021-11-04',
+          end: '2021-11-04'
+        },
+        {
+          title: '+30,000',
+          start: '2021-11-05',
+          end: '2021-11-05'
+        },
+        {
+          title: '+1,000,000',
+          start: '2021-11-20',
+          end: '2021-11-20'
+        },
+        {
+          title: '+10,000',
+          start: '2021-11-14',
+          end: '2021-11-14'
+        },
+        {
+          title: '-5,000',
+          start: '2021-11-23',
+          end: '2021-11-23'
+        },
+      ],
+    });
+    calendar.render();
+    $('.fc-event-title').each(function () {
+      let text = String($(this).text());
+      if (text.match(/\+/g) == '+') {
+        $(this).addClass('blue');
+      };
+      if (text.match(/\-/g) == '-') {
+        $(this).addClass('red');
+      };
+    });
+  });
+  let ctx = document.getElementById('piechart').getContext('2d');
+  const myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels: ['쇼핑', '식비', '의료', '미용'],
+      datasets: [{
+        label: '# of Votes',
+        data: [40, 40, 20, 20],
+        backgroundColor: [
+          '#E3F2FD',
+          '#BCE3FF',
+          '#99D4FF',
+          '#85CBFF'
+        ],
+        borderWidth: 0
+      }]
+    },
+    options: {
+      plugins: {
+        legend: {
+          position: 'right',
+          align: 'end',
+          labels: {
+            usePointStyle: true,
+            color: '#fff'
+          }
+        }
+      }
+    },
+  });
+
+</script>
+
+</html>

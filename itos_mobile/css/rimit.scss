@@ -1,0 +1,47 @@
+@import 'setting.scss';
+code{display: none;}
+header{
+  nav.tab{width: 100%; display: flex;
+    a{
+      display: block; width: calc(100% / 3); padding: 20px; border-bottom: 3px solid #eaeaea; 
+      font: 500 16px $Noto; text-align: center; color: #eaeaea; cursor: pointer;
+    }
+    a.active{color: #000; border-color: #000;}
+  }
+}
+#recent{
+  p{
+    span{font: 600 14px $Lato; color: #999;}
+  }
+  div{font-size: 24px; margin-left: auto; color: #eaeaea; cursor: pointer; transition: color 0.5s ease-in-out;}
+  div.active{color: #007AFF;}
+}
+#bank{display: none; position: relative;
+  nav{
+    a{
+      display: inline-block; position: relative; width: calc(50% - 67px); line-height: 50px; padding:10px 0 10px 65px; cursor: pointer;
+      span{position: absolute; top:10px; left:0;}
+    }
+  }
+}
+#friend{display: none;}
+#darkness{position: absolute; top:0; left:0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.7);}
+#form{position: relative; top:0; left: 0; width: calc(100% - 40px); background: #fff; padding: 20px;
+  nav{display: flex; justify-content: space-between; font: 500 22px $Noto; margin-bottom: 20px;
+    a{width: 30px; height:30px; cursor: pointer;}
+  }
+}
+#account{
+  position: absolute; bottom:0px; left: 0; width: calc(100% - 40px); z-index: 100000 !important;
+  background: #fff; padding:30px 20px; border-radius: 15px 15px 0 0; transition: bottom 1s ease;
+}
+#success{width: calc(100% - 30px); margin: 15px; text-align: center; pointer-events: none;
+  img{display: block; width: 80px; height: 80px; margin: 0 auto 40px auto;}
+    p{margin-bottom: 50px; font: 400 24px $Noto;
+      em{font: 500 24px $Noto;}
+      span{font: 400 12px $Noto; color: #999;
+        a{color: #464646;}
+    }
+  }
+  .button.second{@include button(#007AFF,#fff,#007AFF); margin-top: 15px;}
+}

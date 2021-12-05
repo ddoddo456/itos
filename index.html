@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+</body>
+<script>
+  function deviceCheck() {
+    // 디바이스 종류 설정
+    var pcDevice = "win16|win32|win64|mac|macintel";
+    // 접속한 디바이스 환경
+    if (navigator.platform) {
+      if (pcDevice.indexOf(navigator.platform.toLowerCase()) < 0) {
+        location.href = 'itos_mobile/index.html';
+      } else {
+        location.href = 'itos_PC/index.html';
+      }
+    }
+  }
+  deviceCheck();
+</script>
+
+</html>

@@ -1,0 +1,142 @@
+@import 'setting.scss';
+body{background: #fafafa;}
+#darkness{
+  display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 10;
+}
+.box{display: block; padding:5px 10px; border-radius: 5px; background: #eaeaea; font: 500 12px $Noto; color: #007AFF;}
+aside{
+  article{position: relative; display: flex; align-items: center; height: 70px;
+    > span{font: 700 14px $Lato; margin-left: auto;
+      em{font: 400 14px $Noto; color: #000;}
+    }
+  }
+}
+header{display: flex; justify-content: space-between; align-items: center;
+  h1{display: block; width: 77px; height: 20px; margin-top: -5px;}
+  nav{display: flex;
+    a{padding: 0 10px; font-size: 20px; color: #999;}
+  }
+}
+#banner{
+  section{padding:40px 30px; background: linear-gradient(127.23deg, #007AFF 0%, #283593 300%); border-radius: 20px;
+    div{display: flex; justify-content: space-between; color: #fff;
+      img{width: 30%; margin:20px 0 30px 0;}
+      p{font: 400 16px $Noto;
+        em{font: bold 20px $Noto;}
+      }
+    }
+    a{@include button(#007AFF,#fff,#007AFF); display: block; padding: 15px; font: 500 16px $Noto;}
+  }
+}
+#account{
+  aside{background: #fff; border-radius: 20px; padding: 20px 15px;}
+}
+#consume{
+  section{
+    padding: 30px 20px; background: #fff; border-radius: 20px;
+    aside{display: flex; align-items: center; padding-bottom: 25px; border-bottom: 1px solid #eaeaea;
+      img{width: 50px; height: 50px; margin-right: 15px;}
+      div:nth-child(2){font: 400 14px $Noto;}
+      div:nth-child(3){margin-left: auto; text-align: right;font: bold 16px $Lato;}
+      span{color: #999;}
+    }
+    p{text-align: center; margin-top: 25px;
+      span{font: 500 16px $Noto; color: #007AFF;}
+    }
+  }
+}
+#credit{
+  section{padding: 40px 30px; border-radius:20px; background: #fff;
+    div{position: relative;
+      #donut{position: absolute; left: 50%; margin-left: -100px; transform: rotate(90deg);}
+      p{position: relative; z-index: 100; font: 500 14px $Noto; padding: 70px; text-align: center; color: #999;
+        span{font: bold 34px $Lato; color: #000;}
+        em{font: 500 18px $Noto; color: #000;}
+      }
+    }
+    nav{display: flex; position: relative; margin-top: 30px;
+      a{display: block; width: 50%; text-align: center; color: #999;
+        span{font: 700 24px $Lato; color: #000;}
+        em{font: 500 22px $Noto; color: #000;}
+        &:first-child{ border-right: 1px solid #eaeaea; }
+      }
+    }
+    button{@include button(#fff,#007aff);display: block; width: 100%; padding: 15px; margin-top: 30px; font: 500 14px $Noto;}
+  } 
+}
+#loan{
+  span{font: 400 14px $Noto; color: #eaeaea;}
+  em{font: 500 14px $Lato; color: #666;}
+  section{display: flex; align-items: center; position:relative; padding: 30px 20px; margin-bottom: 15px; background: #fff; border-radius: 20px;
+    a{display: block; width: 50px; height: 50px;}
+    p{font: 400 16px $Noto; margin-left: 15px;}
+    div{margin-left: auto;}
+  }
+  aside{padding: 20px; border-radius: 20px; background: #fff; }
+}
+#adventage{
+  .swiper {position: relative; width: calc(100% + 30px); margin-left: -15px; background: #fff; 
+     &::before , &::after{content: ''; position: absolute; top:0; width: 45px; height: 100%;}
+     &::before{left: 0; background: linear-gradient(to right,rgba(255,255,255,0.7),transparent); z-index: 100;}
+     &::after{right: 0; background: linear-gradient(to left,rgba(255,255,255,0.7),transparent); z-index: 100;}
+     .swiper-wrapper{
+      .swiper-slide{
+        display: flex; align-items: center; box-sizing: border-box; padding: 30px 20px;
+          margin: 20px; border-radius: 20px; width: 300px; height: 150px;
+        p{font: 400 14px $Noto; color: #fff;
+          span{font: 500 18px $Noto;}
+          img{margin-bottom: -4px;}
+          i{margin-bottom: 5px;}
+        }
+      }
+    }
+  }
+}
+#mypage{padding-bottom: 25px;
+  section{border-radius: 20px; overflow: hidden; color: #fff;
+    p{padding: 20px; display: flex; align-items: center; background: #007AFF; position: relative; font: 500 18px $Noto;
+      img{width: 50px; height: 50px; margin-right: 15px;}
+      i{margin-left: auto;}
+    }
+    nav{padding: 20px; display: flex; align-items: center; background: #0066EB; font: 400 14px $Noto;
+      a{display: block; width: calc(100%/3); text-align: center; border-right: 1px solid #fff; cursor: pointer;}
+      a:last-child{border:none;}
+    }
+  }
+}
+#group{
+  section{padding: 30px 20px; border-radius: 20px; background: #007AFF; color: #fff;
+    p{margin-bottom: 50px;
+      span{font: 500 20px $Noto;}
+    }
+    nav{display: flex; text-align: center; position: relative;
+      a{display: flex; flex-direction: column; width: 33.33%;
+        i{font-size: 26px; margin-bottom: 10px;}
+      }
+    }
+  }
+}
+code{display: none; position: fixed; top:50%; left:50%; width: 270px; background: #fff; border-radius: 20px; transform: translate(-50%,-50%); padding: 15px; z-index: 11; transition: opacity 1s ease;}
+#qr{text-align: center;
+  img{width: 100%;}
+  div{font: 500 16px $Noto; color: #999;
+    em{font: 500 18px $Noto; color: #000;}
+  }
+  button{@include button(#999,#fff,#999); display: block; width: 100%; padding: 10px; margin-top: 30px; cursor: pointer;}
+}
+#record{height: 540px; overflow: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  aside{padding-bottom: 10px;
+    article{height: 60px;}
+  }
+  
+  h1{display: flex; justify-content: space-between; padding: 0;
+    a{color: #999; cursor: pointer;}
+  }
+  h2{padding: 15px 0;}
+  em{color: #000;}
+}
+#record::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}

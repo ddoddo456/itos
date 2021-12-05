@@ -1,0 +1,26 @@
+@import 'setting.scss';
+#search{
+  padding: 100px 0;
+  section{
+    hgroup{
+      display: flex; flex-direction: column; align-items: center;
+      input{width: 600px; height:60px;}
+    }
+    nav{display: flex; justify-content: center; margin-bottom: 30px; font: 500 14px $Noto; cursor: pointer;
+      a{padding: 15px; margin-right: 10px; color: #666; border-radius: 10px; background: #fafafa;}
+      a.active{color: #007aff;}
+    }
+    aside{
+      article{
+        h3{font: 400 16px $Noto; position:relative; cursor: pointer; padding: 30px 70px; border-bottom: 1px solid #eaeaea;
+          &::before{@include icon('\f002'); position: absolute; left: 40px; top: 33px; color: #666666;} 
+          i{position: absolute; right: 40px; top: 33px; font-size: 20px; transition: all 0.5s ease; color: #666666; transform:rotate(0deg);}
+          i.active{transform: rotate(180deg);}
+        }
+        p{display: none; position:relative; padding: 30px 70px; background: #fafafa; font: 400 16px $Noto; color: #999;
+          &::before{content: 'A'; font: 500 22px $Noto; position: absolute; left: 42px; top: 24px; color: #666666;}
+        }
+      }
+    }
+  }
+}

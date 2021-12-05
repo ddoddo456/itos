@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='css/rimit.css' type='text/css'>
+  <link rel='stylesheet' href='css/check.css'>
+  <title>itos</title>
+</head>
+
+<body>
+  <header>
+    <h1 class='left-arrow'><a href='index.html'>송금하기</a></h1>
+    <nav class='tab'>
+      <a class='active'>최근</a>
+      <a>계좌</a>
+      <a>연락처</a>
+    </nav>
+  </header>
+  <main id='recent'>
+    <aside>
+      <article>
+        <a class='itos icon' href='javascript:;'></a>
+        <p>나의 아이토스<br><span>010-1234-5678</span></p>
+        <div class='active'><i class='fas fa-star'></i></div>
+      </article>
+      <article>
+        <a class='itos icon' href='javascript:;'></a>
+        <p>권효진<br><span>국민 110123456789</span></p>
+        <div class='active'><i class='fas fa-star'></i></div>
+      </article>
+      <article>
+        <a class='itos icon' href='javascript:;'></a>
+        <p>안원균<br><span>신한 110123456789</span></p>
+        <div><i class='fas fa-star'></i></div>
+      </article>
+      <article>
+        <a class='itos icon' href='javascript:;'></a>
+        <p>남동현<br><span>우리 110123456789</span></p>
+        <div><i class='fas fa-star'></i></div>
+      </article>
+      <article>
+        <a class='itos icon' href='javascript:;'></a>
+        <p>김세인<br><span>카카오 110123456789</span></p>
+        <div><i class='fas fa-star'></i></div>
+      </article>
+      <article>
+        <a class='itos icon' href='javascript:;'></a>
+        <p>정혜진<br><span>국민 110123456789</span></p>
+        <div class='active'><i class='fas fa-star'></i></div>
+      </article>
+    </aside>
+  </main>
+  <main id='bank'>
+    <section class='active'>
+      <input class='search' type='text' placeholder='은행을 검색해보세요'>
+      <nav class='search-target'>
+        <a>국민은행<span class='icon kb'></span></a>
+        <a>신한은행<span class='icon shin'></span></a>
+        <a>우리은행<span class='icon uri'></span></a>
+        <a>카카오뱅크<span class='icon kakao'></span></a>
+        <a>농협은행<span class='icon nonghyub'></span></a>
+        <a>하나은행<span class='icon hana'></span></a>
+        <a>새마을금고<span class='icon newtown'></span></a>
+        <a>SC제일은행<span class='icon sc'></span></a>
+        <a>씨티은행<span class='icon citi'></span></a>
+        <a>부산은행<span class='icon busan'></span></a>
+        <a>우체국<span class='icon office'></span></a>
+        <a>대구은행<span class='icon daegu'></span></a>
+        <a>신협은행<span class='icon shinhyub'></span></a>
+        <a>SBI저축은행<span class='icon sbi'></span></a>
+        <a>KDB산업은행<span class='icon kdb'></span></a>
+        <a>수협은행<span class='icon suhyub'></span></a>
+      </nav>
+      <hr>
+      <nav class='search-target'>
+        <a>키움증권<span class='icon kium'></span></a>
+        <a>국민증권<span class='icon kb'></span></a>
+        <a>미래에셋대우<span class='icon mirae'></span></a>
+        <a>삼성증권<span class='icon samsung'></span></a>
+        <a>농협증권<span class='icon nonghyub'></span></a>
+        <a>유안타증권<span class='icon uanta'></span></a>
+        <a>대신증권<span class='icon daesin'></span></a>
+        <a>한국투자증권<span class='icon hankuk'></span></a>
+        <a>신한금융투자<span class='icon shin'></span></a>
+        <a>유진투자증권<span class='icon yujin'></span></a>
+        <a>한화투자증권<span class='icon hanhwa'></span></a>
+        <a>DB금융투자증권<span class='icon db'></span></a>
+        <a>하나금융증권<span class='icon hana'></span></a>
+        <a>하이투자증권<span class='icon daegu'></span></a>
+        <a>현대차증권<span class='icon hyundailoan'></span></a>
+        <a>신영증권<span class='icon shinyeoung'></span></a>
+      </nav>
+    </section>
+  </main>
+  <main id='friend'>
+    <input class='search' type='text' placeholder='직접 입력해보세요'>
+    <aside class='search-target'>
+      <article><a class='name' href=''>권</a>권효진<br><span><var>국민 110123456789</var></span></article>
+      <article><a class='name' href=''>안</a>안원균<br><span><var>신한 110123456789</var></span></article>
+      <article><a class='name' href=''>남</a>남동현<br><span><var>우리 110123456789</var></span></article>
+      <article><a class='name' href=''>김</a>김세인<br><span><var>카카오 110123456789</var></span></article>
+      <article><a class='name' href=''>정</a>정혜진<br><span><var>우체국 110123456789</var></span></article>
+      <article><a class='name' href=''>백</a>백종준<br><span><var>농협 110123456789</var></span></article>
+    </aside>
+  </main>
+  <code id='form'>
+    <nav>
+      <a><i class='fas fa-chevron-left'></i></a>
+      <a><i class='fas fa-times'></i></a>
+    </nav>
+    <form method='get' id='rimit'>
+      보내는 계좌
+      <input type='text' name='from' readonly>
+      받으실 분 은행
+      <select name='bank' value='hi'>
+        <option value='국민은행'>국민은행</option>
+        <option value='신한은행'>신한은행</option>
+        <option value='우리은행'>우리은행</option>
+        <option value='카카오뱅크'>카카오뱅크</option>
+        <option value='농협은행'>농협은행</option>
+        <option value='하나은행'>하나은행</option>
+        <option value='새마을금고'>새마을금고</option>
+        <option value='SC제일은행'>SC제일은행</option>
+        <option value='씨티은행'>씨티은행</option>
+        <option value='부산은행'>부산은행</option>
+        <option value='우체국'>우체국</option>
+        <option value='대구은행'>대구은행</option>
+        <option value='신협은행'>신협은행</option>
+        <option value='SBI저축은행'>SBI저축은행</option>
+        <option value='KDB산업은행'>KDB산업은행</option>
+        <option value='수협은행'>수협은행</option>
+      </select>
+      보내는 금액
+      <input type='text' name='money' placeholder='금액을 입력하세요' numberOnly>
+      계좌번호
+      <input type='text' name='account' placeholder='계좌번호를 입력하세요' numberOnly style='margin-bottom: 40px;'>
+      <input type='submit' value='송금하기'>
+    </form>
+  </code>
+  <code id='account'>
+    <h1>보내는 계좌</h1>
+    <aside>
+      <article><a class='icon kb'></a><p>국민은행 계좌<br><var>국민 110123456789</var></p><span>1,500,000<em>원</em></span></article>
+      <article><a class='icon shin'></a><p>신한은행 계좌<br><var>신한 110123456789</var></p><span>400,000<em>원</em></span></article>
+    </aside>
+  </code>
+  <code id='success'>
+    <div class='success-checkmark'>
+      <div class='check-icon'>
+        <span class='icon-line line-tip'></span>
+        <span class='icon-line line-long'></span>
+        <div class='icon-circle'></div>
+        <div class='icon-fix'></div>
+      </div>
+    </div>
+    <p>
+      이나경님,<br>
+      <em>송금이 완료되었습니다.</em><br>
+      <span><i class='far fa-question-circle'></i> 송금 무료 횟수가 <a>총 4번</a> 남았어요.</span>
+    </p>
+    <a class='button' href='rimit.html'>홈으로</a>
+    <a class='button second'>아이토스 프라임 신청하기</a>
+  </code>
+  <code id='darkness'></code>
+  <footer>
+    <ul>
+      서비스
+      <li>공지사항</li>
+      <li>자주묻는질문</li>
+      <li>공동인증서 관리</li>
+      <li>고객센터</li>
+    </ul>
+    <ul>
+      회사
+      <li>회사 소개</li>
+      <li>오시는 길</li>
+      <li>채용</li>
+      <li>공고</li>
+    </ul>
+    <ul>
+      문의
+      <li>사업 제휴</li>
+      <li>광고 문의</li>
+      <li>인증 사업 문의</li>
+      <li>마케팅 & PR</li>
+    </ul>
+    <ul>
+      고객센터
+      <li>전화: 1577-1588</li>
+      <li>이메일(고객전용): support@itoss.im</li>
+      <li>이메일(외부기관): support-af@itoss.im</li>
+      <li>민원 접수</li>
+    </ul>
+    <ul>
+      Copyright © Itos Corp. All rights reserved.
+      <li>서비스 이용약관</li>
+      <li>통합 금융정보 서비스 약관</li>
+      <li>개인정보 처리방침</li>
+      <li>위치기반서비스 이용약관</li>
+    </ul>
+  </footer>
+</body>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+<script>
+  let prevPage;
+  $('#recent article').click(function () {
+    let text = $(this).find('span').text();
+    $('#form').show().find('input[name="to"]').val(text);
+    $('main , header').hide();
+    prevPage = '#recent';
+  });
+  $('#bank a').click(function () {
+    let selectedBank = $(this).text();
+    $('#bank option:first-child').text(selectedBank);
+    $('#form').show();
+    $('main , header').hide();
+    prevPage = '#bank';
+  });
+  $('#friend article').click(function () {
+    let text = $(this).find('var').text();
+    let thisBank = String(text.replace(/[!^0-9]/gi, ''));
+    $('#form option:first-child').text(thisBank + '은행');
+    $('#form').show();
+    $('main , header').hide();
+    prevPage = '#friend';
+  });
+  $('input[name="from"]').click(function () {
+    $('#account').show();
+    $('#darkness').show();
+  });
+  $('#account article').click(function () {
+    $('input[name="from"]').val($(this).find('var').text());
+    $('#account').hide();
+    $('#darkness').hide();
+  });
+  $('#form nav > a').click(function () {
+    $('#form').hide();
+    $('header').show();
+    $(prevPage).show();
+  });
+  $('#darkness').click(function () {
+    $(this).hide();
+    $('#account').hide();
+  });
+  $('.tab > a').click(function () {
+    let index = $(this).index();
+    $('.tab > a').removeClass('active').eq(index).addClass('active');
+    $('main').hide().eq(index).show();
+  });
+  $('.search').keyup(function () {
+    let text = $(this).val();
+    let reg = new RegExp(`${text}`);
+    let target = $(this).siblings('.search-target').children();
+    target.each(function () {
+      $(this).text().match(reg) == null ?
+        $(this).hide() : $(this).show();
+    });
+  });
+
+  $('.star').click(function () {
+    $(this).toggleClass('active');
+  });
+
+  $('form').submit(function (e) {
+    e.preventDefault();
+    if (this.from.value == '') {
+      alert('보낼 계좌를 입력해주세요');
+      return;
+    }
+    if (this.to.value == '') {
+      alert('받을 계좌를 입력해주세요');
+      return;
+    }
+    if (this.money.value == '') {
+      alert('금액을 입력해주세요');
+      return;
+    }
+    $(".check-icon").hide();
+    setTimeout(function () {
+      $(".check-icon").show();
+    }, 300);
+    $('#account-3').show();
+    $('#wrap').hide();
+    $(this).parent('div').removeClass('active');
+  });
+
+
+  $('input[numberOnly]').on("keyup", function () {
+    let text = String($(this).val()).replace(/(\d)/g, '');
+    if (text == '') { } else {
+      $(this).val($(this).val().replace(/[^0-9]/gi, ""));
+      alert('숫자만 입력 가능합니다.');
+    }
+  });
+</script>
+
+</html>

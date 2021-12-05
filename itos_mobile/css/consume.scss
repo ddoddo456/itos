@@ -1,0 +1,66 @@
+@import 'setting.scss';
+aside{
+  article{
+    span{margin-right: 15px;}
+  }
+}
+#main{
+  section{width: 100%; margin-left: -15px; padding: 30px 20px; background: #007aff; color: #fff;
+    hgroup{padding: 20px;
+      h3{font: 500 14px $Noto;}
+      h4{font: 400 26px $Noto;
+        span{font: 700 28px $Lato;}
+      }
+    }
+    p{padding: 15px; background: #fff; border-radius: 10px; color: #000;
+      span{font: 500 14px $Noto; color: #007aff;}
+    }
+  }
+  h2{height: 70px; line-height: 70px; border-top: 1px solid #eaeaea;}
+}
+#month{padding-bottom: 25px;
+  aside{
+    article{display: flex; align-items: center; height: 70px; text-align: center;
+      .day{padding-right: 30px; margin:0 30px 0 20px; border-right: 1px solid #eaeaea; font: 400 14px $Noto; color: #999;
+        em{font: bold 28px $Lato; color: #000;}
+      }
+      .from{font: 400 16px $Noto;
+        em{font: 700 16px $Lato; color: #007aff;}
+      }
+    }
+  }
+  .month__btn{@include button(#999,#fff,#999); padding: 18px; font: 500 16px $Noto; margin-top: 25px;}
+}
+#category{
+  section{background: linear-gradient(132.33deg, #007AFF 0%, #50CAFF 108.13%); padding: 30px 20px; border-radius: 20px;
+    p{font: 500 20px $Noto; color: #fff; margin-bottom: 20px;}
+  }
+}
+#charge{
+  hgroup{margin-top: 30px; font: 500 20px $Noto;
+    h3{}
+    h4{
+      span{font: 700 20px $Lato; color: #007aff;}
+    }
+  }
+  aside{border:1px solid #eaeaea; margin-top: 30px; padding:20px; border-radius:20px;}
+}
+.fc td, .fc th {border-style: none !important;}
+.fc-toolbar-title{font: 500 22px $Noto !important;}
+.fc .fc-button{padding: 0 5px !important;}
+.fc-daygrid-day-top{font: 400 14px $Lato; justify-content: center;}
+.fc-scrollgrid-sync-inner{padding: 10px 0;}
+.fc-theme-standard .fc-scrollgrid {border: none !important;}
+.fc-toolbar-title{font: 500 28px $Noto;}
+.fc-h-event{border: none !important; background:transparent !important; text-align: center; color: #f00;}
+.fc-event-title.red{color: #f00;}
+.fc-event-title.blue{color: #007aff;}
+.fc-day-sun {color: #f00;}
+.fc-day-sat {color: #007aff;}
+.fc-scroller {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.fc-scroller::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}

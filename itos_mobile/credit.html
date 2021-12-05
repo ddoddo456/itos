@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='css/credit.css' type='text/css'>
+  <title>itos</title>
+</head>
+
+<body>
+  <header>
+    <h1 class='left-arrow'><a href='index.html'>신용정보</a></h1>
+    <nav>
+      <a class='active' href='javascript:;'>카드</a>
+      <a href='javascript:;'>대출</a>
+      <a href='javascript:;'>연체</a>
+      <a href='javascript:;'>보증</a>
+    </nav>
+  </header>
+  <main id='card'>
+    <section>
+      <p>8월 카드값<br><span>500,000</span>&nbsp;원</p>
+      <div><i class='fas fa-question-circle'></i>&nbsp;전월말 15일 기준</div>
+      <canvas id='cardchart' style='width: 100%; height: 200px;'></canvas>
+    </section>
+    <div class='card__btn'><i class='fas fa-exclamation-circle'></i>&nbsp;이제 일시불 위주로 <span>신용카드</span>를 사용하세요!
+    </div>
+    <aside>
+      <article class='right-arrow'>
+        신용카드
+        <span>24,000원</span>
+      </article>
+      <hr>
+      <article class='right-arrow'>
+        체크카드
+        <span>100,000원</span>
+      </article>
+    </aside>
+    <h1>8월 카드별 카드값</h1>
+    <aside>
+      <article class='right-arrow'>
+        <a class='icon shin' href=""></a>
+        <p>신한카드<br><em>신용</em></p>
+        <span>24,000원</span>
+      </article>
+      <article class='right-arrow'>
+        <a class='icon kb' href=""></a>
+        <p>국민카드<br><em>체크</em></p>
+        <span>100,000원</span>
+      </article>
+      <article class='right-arrow'>
+        <a class='icon uri' href=""></a>
+        <p>우리카드<br><em>체크</em></p>
+        <span>36,000원</span>
+      </article>
+    </aside>
+  </main>
+  <main id='loan' class='gap'>
+    <hgroup>
+      <h3>남은 대출 원금<br><span>1,500,000</span><em>원</em></h3>
+      <h4><i class='fas fa-exclamation-circle'></i>&nbsp;&nbsp;<span>금리 인하 요구권</span>을 행사해보세요!</h4>
+    </hgroup>
+    <aside>
+      <article class='right-arrow'>
+        <a class='icon shin' href=""></a>
+        <p>신한카드<br><em>카드론 분할상환</em></p>
+        <span>24,000원</span>
+      </article>
+      <article class='right-arrow'>
+        <a class='icon kb' href=""></a>
+        <p>국민카드<br><em>카드론 분할상환</em></p>
+        <span>100,000원</span>
+      </article>
+      <article class='right-arrow'>
+        <a class='icon uri' href=""></a>
+        <p>우리카드<br><em>카드론 분할상환</em></p>
+        <span>36,000원</span>
+      </article>
+    </aside>
+  </main>
+  <main id='overdue' class='gap'>
+    <hgroup>
+      <h3>남은 대출 원금<br><span>1,500,000</span><em>원</em></h3>
+      <h4><i class='fas fa-exclamation-circle'></i>&nbsp;&nbsp;<span>금리 인하 요구권</span>을 행사해보세요!</h4>
+    </hgroup>
+    <aside>
+      <article class='right-arrow'>
+        <a class='icon shin' href=""></a>
+        <p>신한카드<br><em>카드론 분할상환</em></p>
+        <span>24,000원</span>
+      </article>
+      <article class='right-arrow'>
+        <a class='icon kb' href=""></a>
+        <p>국민카드<br><em>카드론 분할상환</em></p>
+        <span>100,000원</span>
+      </article>
+      <article class='right-arrow'>
+        <a class='icon uri' href=""></a>
+        <p>우리카드<br><em>카드론 분할상환</em></p>
+        <span>36,000원</span>
+      </article>
+    </aside>
+  </main>
+  <footer>
+    <ul>
+      서비스
+      <li>공지사항</li>
+      <li>자주묻는질문</li>
+      <li>공동인증서 관리</li>
+      <li>고객센터</li>
+    </ul>
+    <ul>
+      회사
+      <li>회사 소개</li>
+      <li>오시는 길</li>
+      <li>채용</li>
+      <li>공고</li>
+    </ul>
+    <ul>
+      문의
+      <li>사업 제휴</li>
+      <li>광고 문의</li>
+      <li>인증 사업 문의</li>
+      <li>마케팅 & PR</li>
+    </ul>
+    <ul>
+      고객센터
+      <li>전화: 1577-1588</li>
+      <li>이메일(고객전용): support@itoss.im</li>
+      <li>이메일(외부기관): support-af@itoss.im</li>
+      <li>민원 접수</li>
+    </ul>
+    <ul>
+      Copyright © Itos Corp. All rights reserved.
+      <li>서비스 이용약관</li>
+      <li>통합 금융정보 서비스 약관</li>
+      <li>개인정보 처리방침</li>
+      <li>위치기반서비스 이용약관</li>
+    </ul>
+  </footer>
+</body>
+
+</html>
+<script src='https://cdn.jsdelivr.net/npm/chart.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+<script>
+  let ctx = document.getElementById('cardchart');
+  function gradient(arr) {
+    let max = Math.max.apply(null, arr);
+    let min = Math.min.apply(null, arr);
+    let grd = ctx.getContext('2d').createLinearGradient(0, min, 0, max * 3);
+    grd.addColorStop(0, "rgba(255,255,255,0.5)");
+    grd.addColorStop(1, "rgba(255,255,255,0)");
+    return grd;
+  }
+  const myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['4', '5', '6', '7', '8'],
+      datasets: [{
+        data: [40, 50, 40, 40, 30],
+        backgroundColor: [
+          gradient([40, 50, 40, 40, 30]),
+        ],
+        borderColor: [
+          '#fff'
+        ],
+        color: '#fff',
+        pointBackgroundColor: '#fff',
+        fill: true,
+        borderWidth: 1
+      }]
+    },
+    options: {
+      plugins: {
+        legend: {
+          display: false,
+        },
+        responsive: false,
+      },
+      scales: {
+        x: {
+          grid: {
+            display: false,
+            borderColor: 'rgba(255,255,255,0.5)'
+          },
+          ticks: {
+            color: '#fff',
+          }
+        },
+        y: {
+          grid: {
+            display: true,
+            borderDash: [2],
+            borderColor: 'rgba(255,255,255,0.5)',
+            color: 'rgba(255,255,255,0.2)'
+          },
+          min: 0,
+          max: 60,
+          ticks: {
+            display: false,
+            color: '#fff',
+          }
+        }
+      }
+    }
+  });
+  $('header nav a').click(function () {
+    let index = $(this).index();
+    $('header nav a').removeClass('active').eq(index).addClass('active');
+    $('main').hide().eq(index).show();
+  });
+</script>

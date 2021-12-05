@@ -1,0 +1,942 @@
+@import url("reset.css");
+@import url("all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap");
+header {
+  padding: 15px;
+}
+
+main {
+  padding: 15px;
+}
+
+aside article {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70px;
+}
+
+aside article > span {
+  font: 700 14px "Lato", sans-serif;
+  margin-left: auto;
+}
+
+aside article > span em {
+  font: 400 14px "Noto Sans KR", sans-serif;
+  color: #000;
+}
+
+.title {
+  padding: 20px 0;
+  font: 500 22px "Noto Sans KR", sans-serif;
+}
+
+.title a {
+  display: block;
+}
+
+h1 {
+  padding: 20px 0;
+  font: 500 22px "Noto Sans KR", sans-serif;
+}
+
+h1 a {
+  display: block;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.search {
+  background-image: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png);
+  background-position: 5px center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid #ccc;
+  padding: 5px 5px;
+  text-indent: 60px;
+  width: 100%;
+}
+
+.search:focus {
+  background-image: none;
+  background-position: -10px center;
+  text-indent: 15px;
+  width: 100%;
+}
+
+.right-arrow {
+  position: relative;
+}
+
+.right-arrow:after {
+  content: '\f054';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.left-arrow {
+  position: relative;
+  padding-left: 30px;
+}
+
+.left-arrow:after {
+  content: '\f053';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.gap {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.gap::before {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: -15px;
+  width: calc(100% + 30px);
+  height: 1px;
+  background: #eaeaea;
+  z-index: 1;
+}
+
+.gap::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: -15px;
+  width: calc(100% + 30px);
+  height: 10px;
+  background: #fafafa;
+}
+
+.logo {
+  display: block;
+  width: 77px;
+  height: 20px;
+  margin-top: -5px;
+  background: url("../img/logo.png");
+  background-size: cover;
+}
+
+.icon {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  line-height: 50px;
+  background: url("../img/icon.png") no-repeat;
+  background-size: 340px;
+}
+
+/* space : 15px, icon : 50px */
+.name {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  text-align: center;
+  border-radius: 50%;
+  background: #007AFF;
+  color: #fff;
+  font: 500 16px "Noto Sans KR", sans-serif !important;
+  line-height: 50px !important;
+}
+
+.plus {
+  background-position: -15px -15px;
+}
+
+.minus {
+  background-position: -80px -15px;
+}
+
+.factory {
+  background-position: -145px -15px;
+}
+
+.netflex {
+  background-position: -210px -15px;
+}
+
+.phone {
+  background-position: -275px -15px;
+}
+
+.medical {
+  background-position: -15px -80px;
+}
+
+.beauty {
+  background-position: -80px -80px;
+}
+
+.food {
+  background-position: -145px -80px;
+}
+
+.shopping {
+  background-position: -210px -80px;
+}
+
+.hyundailoan {
+  background-position: -275px -80px;
+}
+
+.ok {
+  background-position: -15px -145px;
+}
+
+.sermin {
+  background-position: -80px -145px;
+}
+
+.lotte {
+  background-position: -145px -145px;
+}
+
+.chat {
+  background-position: -210px -145px;
+}
+
+.kb {
+  background-position: -275px -145px;
+}
+
+.itos {
+  background-position: -15px -210px;
+}
+
+.shin {
+  background-position: -80px -210px;
+}
+
+.citi {
+  background-position: -145px -210px;
+}
+
+.busan {
+  background-position: -210px -210px;
+}
+
+.samsung {
+  background-position: -275px -210px;
+}
+
+.uri {
+  background-position: -15px -275px;
+}
+
+.kakao {
+  background-position: -80px -275px;
+}
+
+.office {
+  background-position: -145px -275px;
+}
+
+.daegu {
+  background-position: -210px -275px;
+}
+
+.uanta {
+  background-position: -275px -275px;
+}
+
+.nonghyub {
+  background-position: -15px -340px;
+}
+
+.hana {
+  background-position: -80px -340px;
+}
+
+.suhyub {
+  background-position: -145px -340px;
+}
+
+.sbi {
+  background-position: -210px -340px;
+}
+
+.hankuk {
+  background-position: -275px -340px;
+}
+
+.hyundai {
+  background-position: -15px -405px;
+}
+
+.sc {
+  background-position: -80px -405px;
+}
+
+.kdb {
+  background-position: -145px -405px;
+}
+
+.shinhyub {
+  background-position: -210px -405px;
+}
+
+.yujin {
+  background-position: -275px -405px;
+}
+
+.newtown {
+  background-position: -15px -470px;
+}
+
+.hanhwa {
+  background-position: -80px -470px;
+}
+
+.kium {
+  background-position: -145px -470px;
+}
+
+.db {
+  background-position: -210px -470px;
+}
+
+.shinyeoung {
+  background-position: -275px -470px;
+}
+
+.daesin {
+  background-position: -15px -535px;
+}
+
+.mirae {
+  background-position: -80px -535px;
+}
+
+.starbucks {
+  background-position: -145px -535px;
+}
+
+.megabox {
+  background-position: -210px -535px;
+}
+
+.cgv {
+  background-position: -275px -535px;
+}
+
+.mcdonald {
+  background-position: -15px -600px;
+}
+
+.button {
+  display: block;
+  width: calc(100% - 40px);
+  padding: 20px;
+  font: 500 16px "Noto Sans KR", sans-serif;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  background: #007AFF;
+  cursor: pointer;
+}
+
+select, input {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  padding-left: 15px;
+  background: #fafafa;
+  margin: 10px 0;
+}
+
+input {
+  color: #999;
+  font: 500 16px "Noto Sans KR", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+}
+
+input[type='submit'] {
+  background: #007AFF;
+  color: #fff;
+  cursor: pointer;
+}
+
+footer {
+  background: #191f28;
+  padding: 30px 20px;
+  margin-top: 150px;
+}
+
+footer ul {
+  color: #b0b8c1;
+  margin-bottom: 15px;
+}
+
+footer ul li {
+  color: #6b7684;
+}
+
+footer ul li:first-child {
+  margin-top: 5px;
+}
+
+body {
+  background: #fafafa;
+}
+
+#darkness {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.box {
+  display: block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: #eaeaea;
+  font: 500 12px "Noto Sans KR", sans-serif;
+  color: #007AFF;
+}
+
+aside article {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70px;
+}
+
+aside article > span {
+  font: 700 14px "Lato", sans-serif;
+  margin-left: auto;
+}
+
+aside article > span em {
+  font: 400 14px "Noto Sans KR", sans-serif;
+  color: #000;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header h1 {
+  display: block;
+  width: 77px;
+  height: 20px;
+  margin-top: -5px;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav a {
+  padding: 0 10px;
+  font-size: 20px;
+  color: #999;
+}
+
+#banner section {
+  padding: 40px 30px;
+  background: linear-gradient(127.23deg, #007AFF 0%, #283593 300%);
+  border-radius: 20px;
+}
+
+#banner section div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+}
+
+#banner section div img {
+  width: 30%;
+  margin: 20px 0 30px 0;
+}
+
+#banner section div p {
+  font: 400 16px "Noto Sans KR", sans-serif;
+}
+
+#banner section div p em {
+  font: bold 20px "Noto Sans KR", sans-serif;
+}
+
+#banner section a {
+  color: #007AFF;
+  background: #fff;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid #007AFF;
+  display: block;
+  padding: 15px;
+  font: 500 16px "Noto Sans KR", sans-serif;
+}
+
+#account aside {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px 15px;
+}
+
+#consume section {
+  padding: 30px 20px;
+  background: #fff;
+  border-radius: 20px;
+}
+
+#consume section aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+#consume section aside img {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+#consume section aside div:nth-child(2) {
+  font: 400 14px "Noto Sans KR", sans-serif;
+}
+
+#consume section aside div:nth-child(3) {
+  margin-left: auto;
+  text-align: right;
+  font: bold 16px "Lato", sans-serif;
+}
+
+#consume section aside span {
+  color: #999;
+}
+
+#consume section p {
+  text-align: center;
+  margin-top: 25px;
+}
+
+#consume section p span {
+  font: 500 16px "Noto Sans KR", sans-serif;
+  color: #007AFF;
+}
+
+#credit section {
+  padding: 40px 30px;
+  border-radius: 20px;
+  background: #fff;
+}
+
+#credit section div {
+  position: relative;
+}
+
+#credit section div #donut {
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+#credit section div p {
+  position: relative;
+  z-index: 100;
+  font: 500 14px "Noto Sans KR", sans-serif;
+  padding: 70px;
+  text-align: center;
+  color: #999;
+}
+
+#credit section div p span {
+  font: bold 34px "Lato", sans-serif;
+  color: #000;
+}
+
+#credit section div p em {
+  font: 500 18px "Noto Sans KR", sans-serif;
+  color: #000;
+}
+
+#credit section nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-top: 30px;
+}
+
+#credit section nav a {
+  display: block;
+  width: 50%;
+  text-align: center;
+  color: #999;
+}
+
+#credit section nav a span {
+  font: 700 24px "Lato", sans-serif;
+  color: #000;
+}
+
+#credit section nav a em {
+  font: 500 22px "Noto Sans KR", sans-serif;
+  color: #000;
+}
+
+#credit section nav a:first-child {
+  border-right: 1px solid #eaeaea;
+}
+
+#credit section button {
+  color: #fff;
+  background: #007aff;
+  border-radius: 15px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin-top: 30px;
+  font: 500 14px "Noto Sans KR", sans-serif;
+}
+
+#loan span {
+  font: 400 14px "Noto Sans KR", sans-serif;
+  color: #eaeaea;
+}
+
+#loan em {
+  font: 500 14px "Lato", sans-serif;
+  color: #666;
+}
+
+#loan section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding: 30px 20px;
+  margin-bottom: 15px;
+  background: #fff;
+  border-radius: 20px;
+}
+
+#loan section a {
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+
+#loan section p {
+  font: 400 16px "Noto Sans KR", sans-serif;
+  margin-left: 15px;
+}
+
+#loan section div {
+  margin-left: auto;
+}
+
+#loan aside {
+  padding: 20px;
+  border-radius: 20px;
+  background: #fff;
+}
+
+#adventage .swiper {
+  position: relative;
+  width: calc(100% + 30px);
+  margin-left: -15px;
+  background: #fff;
+}
+
+#adventage .swiper::before, #adventage .swiper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 45px;
+  height: 100%;
+}
+
+#adventage .swiper::before {
+  left: 0;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.7)), to(transparent));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.7), transparent);
+  z-index: 100;
+}
+
+#adventage .swiper::after {
+  right: 0;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.7)), to(transparent));
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.7), transparent);
+  z-index: 100;
+}
+
+#adventage .swiper .swiper-wrapper .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 30px 20px;
+  margin: 20px;
+  border-radius: 20px;
+  width: 300px;
+  height: 150px;
+}
+
+#adventage .swiper .swiper-wrapper .swiper-slide p {
+  font: 400 14px "Noto Sans KR", sans-serif;
+  color: #fff;
+}
+
+#adventage .swiper .swiper-wrapper .swiper-slide p span {
+  font: 500 18px "Noto Sans KR", sans-serif;
+}
+
+#adventage .swiper .swiper-wrapper .swiper-slide p img {
+  margin-bottom: -4px;
+}
+
+#adventage .swiper .swiper-wrapper .swiper-slide p i {
+  margin-bottom: 5px;
+}
+
+#mypage {
+  padding-bottom: 25px;
+}
+
+#mypage section {
+  border-radius: 20px;
+  overflow: hidden;
+  color: #fff;
+}
+
+#mypage section p {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #007AFF;
+  position: relative;
+  font: 500 18px "Noto Sans KR", sans-serif;
+}
+
+#mypage section p img {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+#mypage section p i {
+  margin-left: auto;
+}
+
+#mypage section nav {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #0066EB;
+  font: 400 14px "Noto Sans KR", sans-serif;
+}
+
+#mypage section nav a {
+  display: block;
+  width: calc(100%/3);
+  text-align: center;
+  border-right: 1px solid #fff;
+  cursor: pointer;
+}
+
+#mypage section nav a:last-child {
+  border: none;
+}
+
+#group section {
+  padding: 30px 20px;
+  border-radius: 20px;
+  background: #007AFF;
+  color: #fff;
+}
+
+#group section p {
+  margin-bottom: 50px;
+}
+
+#group section p span {
+  font: 500 20px "Noto Sans KR", sans-serif;
+}
+
+#group section nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  position: relative;
+}
+
+#group section nav a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 33.33%;
+}
+
+#group section nav a i {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+code {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 270px;
+  background: #fff;
+  border-radius: 20px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 15px;
+  z-index: 11;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
+
+#qr {
+  text-align: center;
+}
+
+#qr img {
+  width: 100%;
+}
+
+#qr div {
+  font: 500 16px "Noto Sans KR", sans-serif;
+  color: #999;
+}
+
+#qr div em {
+  font: 500 18px "Noto Sans KR", sans-serif;
+  color: #000;
+}
+
+#qr button {
+  color: #999;
+  background: #fff;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid #999;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+#record {
+  height: 540px;
+  overflow: auto;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+#record aside {
+  padding-bottom: 10px;
+}
+
+#record aside article {
+  height: 60px;
+}
+
+#record h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+}
+
+#record h1 a {
+  color: #999;
+  cursor: pointer;
+}
+
+#record h2 {
+  padding: 15px 0;
+}
+
+#record em {
+  color: #000;
+}
+
+#record::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera*/
+}
+/*# sourceMappingURL=main.css.map */

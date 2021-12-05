@@ -1,0 +1,726 @@
+@import url("reset.css");
+@import url("all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+KR:wght@400;500;700&display=swap");
+header {
+  padding: 15px;
+}
+
+main {
+  padding: 15px;
+}
+
+aside article {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70px;
+}
+
+aside article > span {
+  font: 700 14px "Lato", sans-serif;
+  margin-left: auto;
+}
+
+aside article > span em {
+  font: 400 14px "Noto Sans KR", sans-serif;
+  color: #000;
+}
+
+.title {
+  padding: 20px 0;
+  font: 500 22px "Noto Sans KR", sans-serif;
+}
+
+.title a {
+  display: block;
+}
+
+h1 {
+  padding: 20px 0;
+  font: 500 22px "Noto Sans KR", sans-serif;
+}
+
+h1 a {
+  display: block;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.search {
+  background-image: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png);
+  background-position: 5px center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid #ccc;
+  padding: 5px 5px;
+  text-indent: 60px;
+  width: 100%;
+}
+
+.search:focus {
+  background-image: none;
+  background-position: -10px center;
+  text-indent: 15px;
+  width: 100%;
+}
+
+.right-arrow {
+  position: relative;
+}
+
+.right-arrow:after {
+  content: '\f054';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.left-arrow {
+  position: relative;
+  padding-left: 30px;
+}
+
+.left-arrow:after {
+  content: '\f053';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.gap {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.gap::before {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: -15px;
+  width: calc(100% + 30px);
+  height: 1px;
+  background: #eaeaea;
+  z-index: 1;
+}
+
+.gap::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: -15px;
+  width: calc(100% + 30px);
+  height: 10px;
+  background: #fafafa;
+}
+
+.logo {
+  display: block;
+  width: 77px;
+  height: 20px;
+  margin-top: -5px;
+  background: url("../img/logo.png");
+  background-size: cover;
+}
+
+.icon {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  line-height: 50px;
+  background: url("../img/icon.png") no-repeat;
+  background-size: 340px;
+}
+
+/* space : 15px, icon : 50px */
+.name {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  text-align: center;
+  border-radius: 50%;
+  background: #007AFF;
+  color: #fff;
+  font: 500 16px "Noto Sans KR", sans-serif !important;
+  line-height: 50px !important;
+}
+
+.plus {
+  background-position: -15px -15px;
+}
+
+.minus {
+  background-position: -80px -15px;
+}
+
+.factory {
+  background-position: -145px -15px;
+}
+
+.netflex {
+  background-position: -210px -15px;
+}
+
+.phone {
+  background-position: -275px -15px;
+}
+
+.medical {
+  background-position: -15px -80px;
+}
+
+.beauty {
+  background-position: -80px -80px;
+}
+
+.food {
+  background-position: -145px -80px;
+}
+
+.shopping {
+  background-position: -210px -80px;
+}
+
+.hyundailoan {
+  background-position: -275px -80px;
+}
+
+.ok {
+  background-position: -15px -145px;
+}
+
+.sermin {
+  background-position: -80px -145px;
+}
+
+.lotte {
+  background-position: -145px -145px;
+}
+
+.chat {
+  background-position: -210px -145px;
+}
+
+.kb {
+  background-position: -275px -145px;
+}
+
+.itos {
+  background-position: -15px -210px;
+}
+
+.shin {
+  background-position: -80px -210px;
+}
+
+.citi {
+  background-position: -145px -210px;
+}
+
+.busan {
+  background-position: -210px -210px;
+}
+
+.samsung {
+  background-position: -275px -210px;
+}
+
+.uri {
+  background-position: -15px -275px;
+}
+
+.kakao {
+  background-position: -80px -275px;
+}
+
+.office {
+  background-position: -145px -275px;
+}
+
+.daegu {
+  background-position: -210px -275px;
+}
+
+.uanta {
+  background-position: -275px -275px;
+}
+
+.nonghyub {
+  background-position: -15px -340px;
+}
+
+.hana {
+  background-position: -80px -340px;
+}
+
+.suhyub {
+  background-position: -145px -340px;
+}
+
+.sbi {
+  background-position: -210px -340px;
+}
+
+.hankuk {
+  background-position: -275px -340px;
+}
+
+.hyundai {
+  background-position: -15px -405px;
+}
+
+.sc {
+  background-position: -80px -405px;
+}
+
+.kdb {
+  background-position: -145px -405px;
+}
+
+.shinhyub {
+  background-position: -210px -405px;
+}
+
+.yujin {
+  background-position: -275px -405px;
+}
+
+.newtown {
+  background-position: -15px -470px;
+}
+
+.hanhwa {
+  background-position: -80px -470px;
+}
+
+.kium {
+  background-position: -145px -470px;
+}
+
+.db {
+  background-position: -210px -470px;
+}
+
+.shinyeoung {
+  background-position: -275px -470px;
+}
+
+.daesin {
+  background-position: -15px -535px;
+}
+
+.mirae {
+  background-position: -80px -535px;
+}
+
+.starbucks {
+  background-position: -145px -535px;
+}
+
+.megabox {
+  background-position: -210px -535px;
+}
+
+.cgv {
+  background-position: -275px -535px;
+}
+
+.mcdonald {
+  background-position: -15px -600px;
+}
+
+.button {
+  display: block;
+  width: calc(100% - 40px);
+  padding: 20px;
+  font: 500 16px "Noto Sans KR", sans-serif;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  background: #007AFF;
+  cursor: pointer;
+}
+
+select, input {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  padding-left: 15px;
+  background: #fafafa;
+  margin: 10px 0;
+}
+
+input {
+  color: #999;
+  font: 500 16px "Noto Sans KR", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+}
+
+input[type='submit'] {
+  background: #007AFF;
+  color: #fff;
+  cursor: pointer;
+}
+
+footer {
+  background: #191f28;
+  padding: 30px 20px;
+  margin-top: 150px;
+}
+
+footer ul {
+  color: #b0b8c1;
+  margin-bottom: 15px;
+}
+
+footer ul li {
+  color: #6b7684;
+}
+
+footer ul li:first-child {
+  margin-top: 5px;
+}
+
+main {
+  display: none;
+  padding: 15px;
+}
+
+#darkness {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+header p {
+  width: calc(100% + 30px);
+  padding: 50px 0;
+  margin-left: -15px;
+  background: #007aff;
+  text-align: center;
+  font: 500 16px "Noto Sans KR", sans-serif;
+  color: #fff;
+}
+
+header p span {
+  font: bold 28px "Lato", sans-serif;
+}
+
+header p em {
+  font: 400 26px "Noto Sans KR", sans-serif;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  font: 500 16px "Noto Sans KR", sans-serif;
+  color: #999;
+}
+
+header nav a {
+  width: calc(100% / 3);
+  margin: 20px 0;
+  border-right: 2px solid #eaeaea;
+  cursor: pointer;
+}
+
+header nav a.active {
+  color: #000;
+}
+
+#due {
+  display: block;
+}
+
+#due nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70px;
+}
+
+#due nav p {
+  font: 400 14px "Noto Sans KR", sans-serif;
+}
+
+#due nav p span {
+  font: 400 12px "Lato", sans-serif;
+  color: #999;
+}
+
+#due nav i {
+  margin-left: auto;
+}
+
+#due div {
+  padding: 30px 0;
+  font: 400 14px "Noto Sans KR", sans-serif;
+  color: #666;
+}
+
+#due div span {
+  display: block;
+  margin-bottom: 10px;
+  font: 500 16px "Noto Sans KR", sans-serif;
+  color: #000;
+}
+
+#due button {
+  color: #fff;
+  background: #007aff;
+  border-radius: 15px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  padding: 15px;
+}
+
+#record {
+  padding-bottom: 20px;
+}
+
+#record aside article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font: 400 14px "Noto Sans KR", sans-serif;
+}
+
+#record aside article p {
+  margin-left: auto;
+  font: 400 12px "Lato", sans-serif;
+  color: #999;
+}
+
+#record nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#record nav a {
+  width: 50%;
+  margin: 10px;
+  padding: 18px;
+}
+
+#record nav a:nth-child(1) {
+  color: #fff;
+  background: #007aff;
+  border-radius: 15px;
+  text-align: center;
+}
+
+#record nav a:nth-child(2) {
+  color: #007aff;
+  background: #fff;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid #007aff;
+}
+
+#friend button {
+  color: #007aff;
+  background: #fff;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid #007aff;
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+code {
+  display: none;
+}
+
+#form {
+  padding: 40px 20px;
+  width: calc(100% - 40px);
+}
+
+#form h1 {
+  padding: 0 0 0 30px;
+  margin: 0 0 20px 0;
+}
+
+#form span {
+  font: 400 12px "Noto Sans KR", sans-serif;
+  color: #666;
+}
+
+#form span i {
+  color: #007aff;
+}
+
+#choice {
+  position: fixed;
+  display: block;
+  left: 0;
+  bottom: -700px;
+  width: calc(100% - 40px);
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+  background: #fff;
+  z-index: 11;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#choice nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#choice nav .name {
+  margin-right: 0;
+}
+
+#choice nav div {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 15px;
+}
+
+#choice nav div button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: #ccc;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 10px;
+}
+
+#choice aside {
+  height: 300px;
+  overflow: auto;
+}
+
+#choice aside article p var {
+  font: 500 14px "Noto Sans KR", sans-serif;
+}
+
+#choice aside article p span {
+  font: 400 12px "Lato", sans-serif;
+  color: #999;
+}
+
+#choice aside article i {
+  margin-left: auto;
+}
+
+#choice button {
+  color: #007aff;
+  background: #fff;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid #007aff;
+  width: 40%;
+  padding: 15px 0;
+  margin: -20px auto 0;
+  cursor: pointer;
+}
+
+#choice.active {
+  display: block;
+  bottom: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#success {
+  padding: 20 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  top: 100px;
+  left: 0;
+}
+
+#success p {
+  margin-bottom: 50px;
+  font: 400 24px "Noto Sans KR", sans-serif;
+}
+
+#success p em {
+  font: 500 24px "Noto Sans KR", sans-serif;
+}
+
+#success p span {
+  font: 400 12px "Noto Sans KR", sans-serif;
+  color: #999;
+}
+
+#success p span a {
+  color: #464646;
+}
+
+#success button {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  font: 500 16px "Noto Sans KR", sans-serif;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  background: #007AFF;
+  cursor: pointer;
+}
+
+#success button.second {
+  color: #007AFF;
+  background: #fff;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid #007AFF;
+  margin-top: 15px;
+}
+/*# sourceMappingURL=group.css.map */
